@@ -10,8 +10,13 @@ import NavBar from "./NavBar.js";
 import Header from "/Header.js";
 
 function App() {
-
-  useEffect(() => {},[])
+  const [songs, setSongs] = useState([])
+  useEffect(() => {
+    fetch("http://localhost:3001/songs")
+      .then((res) => res.json())
+      .then((songData) => setSongs(songData))
+  },[])
+  
   return (
     <div className="App">
       <Header />
