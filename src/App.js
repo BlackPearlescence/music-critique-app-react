@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
-import {Route, Switch} from "react-router-dom"
-import React,{ useEffect } from "react-dom";
-import Home from './components/Home.js';
+import {Route, Routes} from "react-router-dom";
+import React,{ useEffect, useState } from "react";
+import Home from "./Home.js";
 import AllSongsGallery from "./AllSongsGallery.js";
 import SongOfTheDay from "./SongOfTheDay.js";
 import SongView from "./SongView.js";
@@ -10,19 +10,25 @@ import NavBar from './components/NavBar.js';
 import Header from "/Header.js";
 
 function App() {
+  const [songs, setSongs] = useState([])
+  useEffect(() => {
+    fetch("http://localhost:3001/songs")
+      .then((res) => res.json())
+      .then((songData) => setSongs(songData))
+  },[])
 
-  useEffect(() => {},[])
   return (
     <div className="App">
+      <AllSongsGallery songs={songs}/>
       <Header />
 
-      <Switch>
-        <Route exact path="/">
+      {/* <Routes>
+        <Route>
           <Home />
         </Route>
 
-        <Route >
-          <AllSongsGallery />
+        <Route>
+          <AllSongsGallery songs={songs}/>
         </Route>
 
         <Route>
@@ -32,7 +38,7 @@ function App() {
         <Route>
           <SongView />
         </Route>
-      </Switch>
+      </Routes> */}
     </div>
   );
 }
