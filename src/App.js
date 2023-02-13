@@ -1,5 +1,5 @@
 
-import './App.css';
+
 import {Route, Routes} from "react-router-dom";
 import React,{ useEffect, useState } from "react";
 import Home from "./components/Home.js";
@@ -7,7 +7,7 @@ import AllSongsGallery from "./components/AllSongsGallery.js";
 import SongOfTheDay from "./components/SongOfTheDay.js";
 import SongView from "./components/SongView.js";
 import NavBar from './components/NavBar.js';
-import Header from "/components/Header.js";
+import Header from "./components/Header.js";
 
 function App() {
   const [songs, setSongs] = useState([])
