@@ -21,8 +21,9 @@ function App() {
     <div className="App">
       <AllSongsGallery songs={songs}/>
       <Header />
+      <Home />
 
-      {/* <Routes>
+       {/* <Routes>
         <Route>
           <Home />
         </Route>
