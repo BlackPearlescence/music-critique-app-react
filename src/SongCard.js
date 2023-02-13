@@ -17,7 +17,7 @@ function SongCard({song}){
                         return <span>{genre}, </span>
                     }
                }) : song.genre}</Card.Text>
-                <Button variant="primary">View</Button>
+                <Button variant="primary" width="10">View</Button>
                 <Button variant="danger">Delete</Button>
             </Card.Body>
         </Card>
