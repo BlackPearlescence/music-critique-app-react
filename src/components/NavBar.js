@@ -11,7 +11,7 @@ function NavigationBar() {
 
       <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home">The Music</Navbar.Brand>
+          <Navbar.Brand href="#home">Sound Savant</Navbar.Brand>
           <Nav>
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">All Songs</Nav.Link>
