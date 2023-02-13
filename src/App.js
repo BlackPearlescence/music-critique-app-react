@@ -12,7 +12,7 @@ import Header from "./components/Header.js";
 function App() {
   const [songs, setSongs] = useState([])
   useEffect(() => {
-    fetch("http://localhost:3001/songs")
+    fetch("http://localhost:4000/songs")
       .then((res) => res.json())
       .then((songData) => setSongs(songData))
   },[])

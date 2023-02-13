@@ -7,7 +7,7 @@ function Home() {
 
   const mostPopularSong = useEffect(() => {
     // fetch the 3 most recently added projects from json-server
-    fetch(' http://localhost:4000/songs?_sort=id&_order=desc&_limit=4')
+    fetch(' http://localhost:4000/songs?_sort=id&_order=desc&_limit=1')
       .then((r) => r.json())
       .then((allSongs) => setAllSong(allSongs));
     console.log(allSongs);
@@ -26,7 +26,7 @@ function Home() {
         everything you need to enhance your music experience. So let's dive in
         and discover the magic of music together!
       </p>
-      <h3>Top 5 Rated Songs</h3>
+      <h3>Top Rated Song</h3>
       <section className="box">
         {allSongs.map((song) => (
           <img src={song.image} key={song.id} alt={song.title} />
