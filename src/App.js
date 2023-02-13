@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {Route, Switch} from "react-router-dom"
-import React from "react-dom";
+import React,{ useEffect } from "react-dom";
 import Home from "./Home.js";
 import AllSongsGallery from "./AllSongsGallery.js";
 import SongOfTheDay from "./SongOfTheDay.js";
@@ -10,6 +10,8 @@ import NavBar from "./NavBar.js";
 import Header from "/Header.js";
 
 function App() {
+
+  useEffect(() => {},[])
   return (
     <div className="App">
       <Header />
