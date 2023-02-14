@@ -1,12 +1,12 @@
 import React from 'react';
-import { Card } from "semantic-ui-react";
+import Card from "react-bootstrap/Card";
 
 function CommentCard() {
 
     return (
         <Card>
             <div className="content">
-                <div className="header">{Comments}</div>
+                {/* <div className="header">{Comments}</div> */}
             </div>
         </Card>
     )
