@@ -2,6 +2,7 @@ import SongList from "./SongList.js";
 import Search from "./Search.js"
 import Form from "react-bootstrap/Form"
 import React, {useEffect, useState} from "react"
+import { NavLink } from "react-router-dom";
 function AllSongsGallery({songs}){
     const [searchQuery, setSearchQuery] = useState("")
     const [filterQuery, setFilterQuery] = useState ("All")
