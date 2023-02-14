@@ -8,50 +8,29 @@ import { BsPatchPlusFill } from "react-icons/bs"
 import { BsPatchMinusFill } from "react-icons/bs"
 import Row from "react-bootstrap/Row"
 import { Col } from "react-bootstrap";
-function Search({songs}){
+function Search({songs, searchQuery, setSearchQuery, filterQuery, setFilterQuery, sortQuery, setSortQuery}){
     const [isAdvanced, setIsAdvanced] = useState(false)
+    
     const handleAdvancedSearchClick = (e) => {
         setIsAdvanced(!isAdvanced)
     }
-    const inputTitleStyles = {
-            "font-size" : "20px",
+    
+    const handleSearchChange = (e) => {
+        setSearchQuery(e.target.value)
     }
 
     return(
             <InputGroup>
-                <Form.Control type="text" placeholder="Search..."/>
-                {isAdvanced ? <Button onClick={handleAdvancedSearchClick }>Advanced Search <BsPatchPlusFill /></Button>:
-                <Button onClick={handleAdvancedSearchClick}>Hide <BsPatchMinusFill/></Button>}
-                <InputGroup>
-                    <Row>
-                        <Form.Label style={inputTitleStyles}>Genre Filter: </Form.Label>
-                        <Form.Select aria-label="Choose a Genre">
-                            <option>Hip-Hop</option>
-                            <option>Rap</option>
-                            <option>Electropop</option>
-                            <option>R&B</option>
-                            <option>Pop</option>
-                            <option>Nigerian Alté</option>
-                            <option>Grime</option>
-                            <option>Eskibeat</option>
-                        </Form.Select>
-                    </Row>
-                    <Row>
-                        <Form.Label style={inputTitleStyles}>Sort: </Form.Label>
-                        <Col>
-                            <Form.Check type="radio" label="Song Title" />
-                            <Form.Check type="radio" label="Artist Name" />
-                        </Col>
-                        <Col>
-                            <Form.Check type="radio" label="Year" />
-                            <Form.Check type="radio" label="Length" />
-                        </Col>
-                        <Col>
-                            <Form.Check type="radio" label="Upvotes" />
-                            <Form.Check type="radio" label="Downvotes" />
-                        </Col>
-                    </Row>
-                </InputGroup>
+                <Form.Control type="text" placeholder="Search..." onChange={handleSearchChange} value={searchQuery}/>
+                {isAdvanced ?
+                <Button onClick={handleAdvancedSearchClick}>Hide <BsPatchMinusFill/></Button>:
+                <Button onClick={handleAdvancedSearchClick }>Advanced Search <BsPatchPlusFill /></Button>}
+                {isAdvanced ? <AdvancedSearch
+                filterQuery={filterQuery}
+                setFilterQuery={setFilterQuery}
+                sortQuery={sortQuery}
+                setSortQuery={setSortQuery}
+                songs={songs}/> : null}
             </InputGroup>
     );
 }
