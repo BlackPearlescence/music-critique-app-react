@@ -32,7 +32,8 @@ function App() {
           <Route path="/:id/view" element={<SongView />}/>
         </Routes>
         <NewCommentForm 
-        comments={}
+        comments={comments}
+        setComments={setComments}
         />
        
     </div>
