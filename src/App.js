@@ -1,43 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-import {Route, Switch} from "react-router-dom"
-import React,{ useEffect } from "react-dom";
-import Home from "./Home.js";
-import AllSongsGallery from "./AllSongsGallery.js";
-import SongOfTheDay from "./SongOfTheDay.js";
-import SongView from "./SongView.js";
-import NavBar from "./NavBar.js";
-import Header from "/Header.js";
+
+
+import {Route, Routes, Router} from "react-router-dom";
+import React,{ useEffect, useState } from "react";
+import Home from "./components/Home.js";
+import AllSongsGallery from "./components/AllSongsGallery.js";
+import SongOfTheDay from "./components/SongOfTheDay.js";
+import SongView from "./components/SongView.js";
+import Header from "./components/Header.js";
 
 function App() {
   const [songs, setSongs] = useState([])
   useEffect(() => {
-    fetch("http://localhost:3001/songs")
+    fetch("http://localhost:4000/songs")
       .then((res) => res.json())
       .then((songData) => setSongs(songData))
   },[])
-  
+
   return (
     <div className="App">
+      {/* <AllSongsGallery songs={songs}/> */}
       <Header />
+        <Routes>
+          <Route exact path="/" element={<Home/>}/>
 
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
+          <Route path="/songs" element={<AllSongsGallery songs={songs}/>}/>
 
-        <Route >
-          <AllSongsGallery />
-        </Route>
+          <Route path="/songoftheday" element={<SongOfTheDay/>} />
 
-        <Route>
-          <SongOfTheDay />
-        </Route>
-
-        <Route>
-          <SongView />
-        </Route>
-      </Switch>
+          <Route path="/:id/view" element={<SongView />}/>
+        </Routes>
+       
     </div>
   );
 }
