@@ -8,7 +8,7 @@ import { BsPatchPlusFill } from "react-icons/bs"
 import { BsPatchMinusFill } from "react-icons/bs"
 import Row from "react-bootstrap/Row"
 import { Col } from "react-bootstrap";
-function Search({songs, searchQuery, setSearchQuery, filterQuery, setFilterQuery, sortQuery, setSortQuery}){
+function Search({songs, searchQuery, setSearchQuery, filterQuery, setFilterQuery, sortQuery, setSortQuery, genres}){
     const [isAdvanced, setIsAdvanced] = useState(false)
     
     const handleAdvancedSearchClick = (e) => {
@@ -30,7 +30,8 @@ function Search({songs, searchQuery, setSearchQuery, filterQuery, setFilterQuery
                 setFilterQuery={setFilterQuery}
                 sortQuery={sortQuery}
                 setSortQuery={setSortQuery}
-                songs={songs}/> : null}
+                songs={songs}
+                genres={genres}/> : null}
             </InputGroup>
     );
 }
