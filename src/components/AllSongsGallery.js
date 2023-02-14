@@ -67,6 +67,6 @@ function AllSongsGallery({songs}){
             songs={filteredList}/>
         </div>
     );
-}
+
 
 export default AllSongsGallery;
