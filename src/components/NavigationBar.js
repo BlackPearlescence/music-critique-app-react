@@ -1,24 +1,32 @@
 // import Container from "react-bootstrap/Container";
 // import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import {Navbar, Nav, Container} from "react-bootstrap";
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import { Link } from "react-router-dom";
+// import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+import {LinkContainer} from 'react-router-bootstrap'
+// import { Link } from "react-router-dom";
 
 function NavigationBar() {
   return (
     <>
-
       <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home">Sound Savant</Navbar.Brand>
+        <LinkContainer exact to="/">
+          <Navbar.Brand>Sound Savant</Navbar.Brand>
+          </LinkContainer>
           <Nav>
-            <Nav.Link to="#home">Home</Nav.Link>
-            <Nav.Link to="#features">All Songs</Nav.Link>
-            <Nav.Link to="#pricing">Add a Song</Nav.Link>
+          <LinkContainer to ="/songs">
+            <Nav.Link>All Songs</Nav.Link>
+            </LinkContainer>
+          <LinkContainer to= "/songoftheday" >
+            <Nav.Link>Add a Song</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/">
+            <Nav.Link>Home</Nav.Link>
+          </LinkContainer>
           </Nav>
-        </Container>
+          </Container>
       </Navbar>
     </>
   );

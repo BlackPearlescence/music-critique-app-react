@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 
+import Gallery from "./Gallery";
+
 function Home() {
   const [allSongs, setAllSong] = useState([])
 
   const mostPopularSong = useEffect(() => {
     // fetch the 3 most recently added projects from json-server
-    fetch(' http://localhost:4000/songs?_sort=id&_order=desc&_limit=1')
+    fetch(' http://localhost:4000/songs?_sort=id&_order=desc&_limit=5')
       .then((r) => r.json())
       .then((allSongs) => setAllSong(allSongs));
     console.log(allSongs);
@@ -26,12 +28,13 @@ function Home() {
         everything you need to enhance your music experience. So let's dive in
         and discover the magic of music together!
       </p>
-      <h3>Top Rated Song</h3>
-      <section className="box">
+      <h3>Song Gallery</h3>
+      {/* <section className="box">
         {allSongs.map((song) => (
           <img src={song.image} key={song.id} alt={song.title} />
         ))}
-      </section>
+      </section> */}
+      <Gallery allSongs={allSongs} />
 
       <div style={{ margin: '1rem 0' }}>
         <Button variant="primary" size="lg">
