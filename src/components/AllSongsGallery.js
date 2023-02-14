@@ -35,7 +35,7 @@ function AllSongsGallery({songs}){
     //     songs.sort((a,b) => {
     //         const a.split(" ")
     //     })
-    }
+    // }
 
     switch(sortQuery) {
         case "Song Title":
@@ -67,6 +67,6 @@ function AllSongsGallery({songs}){
             songs={filteredList}/>
         </div>
     );
-
+}
 
 export default AllSongsGallery;

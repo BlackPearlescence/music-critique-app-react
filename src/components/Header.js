@@ -1,4 +1,4 @@
-import NavigationBar from "./NavBar.js";
+import NavigationBar from "./NavigationBar.js";
 
 function Header() {
 
