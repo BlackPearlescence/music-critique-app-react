@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
-import Button from 'react-bootstrap/Button';
-import { Link } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
 
 import Gallery from "./Gallery";
 
+
 function Home() {
   const [allSongs, setAllSong] = useState([])
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/songs");
+  }
 
   const mostPopularSong = useEffect(() => {
     // fetch the 3 most recently added projects from json-server
@@ -16,9 +21,9 @@ function Home() {
   }, []);
 
   return (
-    <section className="box">
-      <h2 style={{ fontSize: '3rem' }}>View All Music.</h2>
-      <p>
+    <section>
+      <h2 style={{ fontSize: '3rem' }}>Welcome to Sound Savant</h2>
+      <p className="body-text">
         Welcome to the Music App Project! This project is designed to allow
         users to experience the joy of music in a new and exciting way. With our
         app, users will be able to add their favorite songs to their personal
@@ -28,19 +33,8 @@ function Home() {
         everything you need to enhance your music experience. So let's dive in
         and discover the magic of music together!
       </p>
-      <h3>Song Gallery</h3>
-      {/* <section className="box">
-        {allSongs.map((song) => (
-          <img src={song.image} key={song.id} alt={song.title} />
-        ))}
-      </section> */}
-      <Gallery allSongs={allSongs} />
 
-      <div style={{ margin: '1rem 0' }}>
-        <Button variant="primary" size="lg">
-          View All Songs
-        </Button>
-      </div>
+      <Gallery allSongs={allSongs} />
     </section>
   );
 }
