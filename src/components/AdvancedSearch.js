@@ -8,25 +8,13 @@ import { Col } from "react-bootstrap";
 const inputTitleStyles = {
     "font-size" : "20px",
 }
-function AdvancedSearch({songs, filterQuery, setFilterQuery, sortQuery, setSortQuery}){
+function AdvancedSearch({songs, filterQuery, setFilterQuery, sortQuery, setSortQuery, genres}){
 
-    const [genres, setGenres] = useState([])
-
-    // Obtain a list of genres to display in the Genre Filter Dropdown
-    songs.forEach(song => {
-        song.genre.forEach(genre => {
-            if(!genres.includes(genre)){
-                setGenres([...genres, genre]);
-            }
-        })
-    })
-    // The first element in the dropdown must always be "All"
-    if(genres[0] != "All"){
-        setGenres(["All", ...genres])
-    } 
+    
 
     const handleFilterChange = (e) => {
         setFilterQuery(e.target.value)
+        console.log(e.target.value)
     }
     
     const handleSortChange = (e) => {
