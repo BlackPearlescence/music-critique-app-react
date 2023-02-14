@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CommentList from './CommentList'
+import CommentForm from './CommentForm'
 
 function SongView() {
 
@@ -39,6 +40,7 @@ function SongView() {
                 </div>
                 <div className="comments">
                     <CommentList />
+                    <CommentForm />
                 </div>
             </div>
             )}

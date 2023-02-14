@@ -10,6 +10,8 @@ import Header from "./components/Header.js";
 
 function App() {
   const [songs, setSongs] = useState([])
+  const [comments, setComments] = useState("")
+
   useEffect(() => {
     fetch("http://localhost:4000/songs")
       .then((res) => res.json())
@@ -29,6 +31,9 @@ function App() {
 
           <Route path="/:id/view" element={<SongView />}/>
         </Routes>
+        <NewCommentForm 
+        comments={}
+        />
        
     </div>
   );

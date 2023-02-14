@@ -2,33 +2,35 @@ import React from 'react';
 import Form from 'react-bootstrap/Form'
 import CommentCard from './CommentCard'
 import CommentList from './CommentList'
+import { MDBTypography, MDBBtn } from 'mdb-react-ui-kit';
 
-function NewCommentForm() {
+function NewCommentForm({setComments}) {
 
-    // function handleClick(event) {  
+    function handleClick(event) {  
 
-        // function handleSubmit(event) {
-        //     event.preventDefault();
+        function handleSubmit(event) {
+            event.preventDefault();
 
-        //     const newComment = document.querySelector('#comment').value
-        // }
+            const newComment = document.querySelector('#comment').value
+        }
 
-    //     fetch(``, {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(newComment)
-    //     })
-    //     .then(response => response.json())
+        fetch(`http://localhost:4000/songs`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newComment)
+        })
+        .then(response => response.json())
 
-    //     // add logic for new comment >>    setComments(prev => [...prev, newComment])
-    // }
+        setComments(prev => [...prev, newComment])
+    }
 
     return (
         <div>
 
             <CommentCard>
+                <CommentList />
                 <Form
                 onSubmit={handleSubmit}
                 >
@@ -39,8 +41,13 @@ function NewCommentForm() {
                         id="comment"
                         placeholder="Comment" 
                         name="Comment"/>
+                        <div className="w-100">
+                            <MDBTypography tag="h5">Add a Comment</MDBTypography>
+                        </div>
                     </Form.Group>
-                    <Form.Button onClick={handleClick}>Submit Comment</Form.Button>
+                    <MDBBtn onClick={handleClick}>
+                    Send <MDBIcon fas icon="long-arrow-alt-right ms-1" />
+                    </MDBBtn>
                 </Form>
             </CommentCard>
         </div>
