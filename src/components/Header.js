@@ -1,7 +1,6 @@
 import NavigationBar from "./NavigationBar.js";
 
 function Header({isDarkMode, onToggleDarkMode}) {
-
     return(
         <div>
             <NavigationBar

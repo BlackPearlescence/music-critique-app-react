@@ -3,10 +3,7 @@
 import {Navbar, Nav, Container} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
 import {LinkContainer} from 'react-router-bootstrap'
-// import { Link } from "react-router-dom";
 
 function NavigationBar({isDarkMode, onToggleDarkMode}) {
   const buttonTextContent = isDarkMode ? "Light Mode" : "Dark Mode";
@@ -37,6 +34,5 @@ function NavigationBar({isDarkMode, onToggleDarkMode}) {
     </>
   );
 }
-
 
 export default NavigationBar;

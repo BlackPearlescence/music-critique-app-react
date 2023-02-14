@@ -1,16 +1,9 @@
 import { useEffect, useState } from "react";
 
-import { useNavigate } from "react-router-dom";
+import Gallery from './Gallery';
 
-import Gallery from "./Gallery";
-
-
-function Home() {
-  const [allSongs, setAllSong] = useState([])
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/songs");
-  }
+function Home({ isDarkMode }) {
+  const [allSongs, setAllSong] = useState([]);
 
   const mostPopularSong = useEffect(() => {
     // fetch the 3 most recently added projects from json-server
@@ -21,7 +14,7 @@ function Home() {
   }, []);
 
   return (
-    <section>
+    <section className={isDarkMode ? 'App' : 'App.light'}>
       <h2 style={{ fontSize: '3rem' }}>Welcome to Sound Savant</h2>
       <p className="body-text">
         Welcome to the Music App Project! This project is designed to allow

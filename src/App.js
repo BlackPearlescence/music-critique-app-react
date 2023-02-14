@@ -18,27 +18,29 @@ function App() {
 
 
   useEffect(() => {
-    fetch("http://localhost:4000/songs")
+    fetch('http://localhost:4000/songs')
       .then((res) => res.json())
-      .then((songData) => setSongs(songData))
-  },[])
-
+      .then((songData) => setSongs(songData));
+  }, []);
   return (
-    <div className="App">
+    <div className={isDarkMode ? 'App' : 'App.light'}>
       <Header
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}
-        onToggleDarkMode={onToggleDarkMode} />
-        <Routes>
-          <Route exact path="/" element={<Home/>}/>
+        onToggleDarkMode={onToggleDarkMode}
+      />
+      <Routes>
+        <Route exact path="/" element={<Home isDarkMode={isDarkMode} />} />
 
-          <Route path="/songs" element={<AllSongsGallery songs={songs}/>}/>
+        <Route
+          path="/songs"
+          element={<AllSongsGallery songs={songs} isDarkMode={isDarkMode} />}
+        />
 
-          <Route path="/songoftheday" element={<SongOfTheDay/>} />
+        <Route path="/songoftheday" element={<SongOfTheDay />} />
 
-          <Route path="/:id/view" element={<SongView />}/>
-        </Routes>
-
+        <Route path="/:id/view" element={<SongView />} />
+      </Routes>
     </div>
   );
 }
