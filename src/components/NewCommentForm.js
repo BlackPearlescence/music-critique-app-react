@@ -27,7 +27,7 @@ function NewCommentForm() {
     }
 
     const handleCommentSubmit = (e) => {
-        
+
     }
 
     return (
@@ -43,7 +43,7 @@ function NewCommentForm() {
                                 placeholder="Add a Comment" 
                                 name="Comment"/>
                     </Form.Group>
-                    <Button variant="primary" type="submit">Submit Comment Bitch</Button> 
+                    <Button variant="primary" type="submit">Submit Comment!</Button> 
                 </Form>
         </div>
     )
