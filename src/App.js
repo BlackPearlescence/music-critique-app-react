@@ -7,11 +7,11 @@ import AllSongsGallery from "./components/AllSongsGallery.js";
 import SongOfTheDay from "./components/SongOfTheDay.js";
 import SongView from "./components/SongView.js";
 import Header from "./components/Header.js";
+import NewCommentForm from './components/NewCommentForm.js'
 
  function App() {
   const [songs, setSongs] = useState([])
   const [genres, setGenres] = useState([])
-
   useEffect(() => {
     const fetchData = async () => {
         const songData = await fetch("http://localhost:4000/songs")
@@ -43,6 +43,10 @@ import Header from "./components/Header.js";
 
           <Route path="/songs/:id/view" element={<SongView />}/>
         </Routes>
+        <NewCommentForm 
+        comments={comments}
+        setComments={setComments}
+        />
        
     </div>
   );

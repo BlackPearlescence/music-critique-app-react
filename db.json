@@ -1,47 +1,5 @@
-{
-  "genres": [
-    {
-      "id": 1,
-      "genre": "Afropop"
-    },
-    {
-      "id": 2,
-      "genre": "R&B"
-    },
-    {
-      "id": 3,
-      "genre": "Rap"
-    },
-    {
-      "id": 4,
-      "genre": "Soul"
-    },
-    {
-      "id": 5,
-      "genre": "Eskibeat"
-    },
-    {
-      "id": 6,
-      "genre": "Grime"
-    },
-    {
-      "id": 7,
-      "genre": "Nigerian Alté"
-    },
-    {
-      "id": 8,
-      "genre": "Pop"
-    },
-    {
-      "id": 9,
-      "genre": "Electropop"
-    },
-    {
-      "id": 10,
-      "genre": "Hip-Hop"
-    }
-  ],
-  "songs": [
+
+{"songs": [
     {
       "id": 1,
       "title": "Rags2Riches 2 (feat. Lil Baby)",
@@ -87,10 +45,8 @@
       "downvotes": 10,
       "comments": [
         {
-          "username": "feafaefga",
-          "icon": "",
-          "commentText": "An oldie that still holds up well!",
-          "likes": 30
+            "commentText" : "An oldie that still holds up well!",
+            "likes": 30
         },
         {
           "commentText": "Bow Wow and T-Pain were a formidable force back in '06",
@@ -116,16 +72,12 @@
       "downvotes": 10,
       "comments": [
         {
-          "user": "Penelope",
-          "icon": "",
-          "commentText": "Throw this on at the gym",
-          "likes": 10
+            "commentText" : "Throw this on at the gym",
+            "likes": 10
         },
         {
-          "user": "fafgeafae",
-          "icon": "",
-          "commentText": "Pumps me up every time. I could run through a brick wall right now!",
-          "likes": 5
+            "commentText" : "Pumps me up every time. I could run through a brick wall right now!",
+            "likes": 5
         }
       ]
     },
@@ -243,110 +195,6 @@
         "Who doesn't luv money?",
         "Impossible to fight the urge to dance when this one's on!"
       ]
-    },
-    {
-      "title": "feafea",
-      "artist": "",
-      "album": "",
-      "genre": [
-        "R&B",
-        "Rap"
-      ],
-      "description": "",
-      "songUrl": "",
-      "image": "",
-      "id": 9
-    },
-    {
-      "title": "feafea",
-      "artist": "",
-      "album": "",
-      "genre": [
-        "Soul",
-        "Eskibeat"
-      ],
-      "description": "",
-      "songUrl": "",
-      "image": "",
-      "id": 10
-    },
-    {
-      "title": "efqeafea",
-      "artist": "",
-      "album": "",
-      "genre": [
-        "Grime",
-        "Eskibeat"
-      ],
-      "description": "",
-      "songUrl": "",
-      "image": "",
-      "id": 11
-    },
-    {
-      "title": "efqeafea",
-      "artist": "",
-      "album": "",
-      "genre": [
-        "Grime",
-        "Eskibeat"
-      ],
-      "description": "",
-      "songUrl": "",
-      "image": "",
-      "id": 12
-    },
-    {
-      "title": "efqeafea",
-      "artist": "",
-      "album": "",
-      "genre": [
-        "Grime",
-        "Eskibeat"
-      ],
-      "description": "",
-      "songUrl": "",
-      "image": "",
-      "id": 13
-    },
-    {
-      "title": "efqeafea",
-      "artist": "",
-      "album": "",
-      "genre": [
-        "Grime",
-        "Eskibeat"
-      ],
-      "description": "",
-      "songUrl": "",
-      "image": "",
-      "id": 14
-    },
-    {
-      "title": "efqeafea",
-      "artist": "",
-      "album": "",
-      "genre": [
-        "Grime",
-        "Eskibeat"
-      ],
-      "description": "",
-      "songUrl": "efqeafeaf",
-      "image": "",
-      "id": 15
-    },
-    {
-      "title": "f",
-      "artist": "efqeafeaff",
-      "album": "efqeafeaf",
-      "genre": [
-        "Grime",
-        "Eskibeat"
-      ],
-      "description": "efqeafeaff",
-      "songUrl": "efqeafeaf",
-      "image": "efqeafeaffff",
-      "id": 16
     }
   ]
 }

@@ -53,22 +53,29 @@ function AllSongsGallery({songs = [], setSongs, genres}){
     //         const a.split(" ")
     //     })
     // }
-    
 
-    switch(sortQuery) {
-        case "Song Title":
-            break;
-        case "Artist Name":
-            break;
-        case "Year":
-            break;
-        case "Length":
-            break;
-        case "Upvotes":
-            break;
-        case "Downvotes":
-            break;
-    }
+    useEffect(()=>{
+        switch(sortQuery) {
+            case "title":
+                setSortQuery(songs.sort((a,b) => a.title.localeCompare(b.title)))
+                break;
+            case "artist":
+                setSortQuery(songs.sort((a,b) => a.artist.localeCompare(b.artist)))
+                break;
+            case "year":
+                setSortQuery(songs.sort((a,b) => parseInt(a.year) - parseInt(b.year)))
+                break;
+            case "Length":
+                break;
+            case "Upvotes":
+                break;
+            case "Downvotes":
+                break;
+            default:
+                break;
+        }
+    }, [sortQuery])
+    
 
     const handleShowNewSongForm = (e) => {
         setShowForm(true);
@@ -76,7 +83,6 @@ function AllSongsGallery({songs = [], setSongs, genres}){
 
     return(
         <div>
-             
             <Search songs={songs}
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
