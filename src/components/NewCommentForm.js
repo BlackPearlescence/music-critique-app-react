@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState} from 'react';
 import Form from "react-bootstrap/Form"
+import Button from "react-bootstrap/Button";
 
 function NewCommentForm() {
+
+    const [commentForm, setCommentForm] = useState({
+        username: "",
+        icon: "",
+        commentText: "",
+        likes: 0,
+    })
 
     function handleClick(event) {
         const newComment = document.querySelector('#comment').value
 
-        fetch(``, {
+        fetch("http://localhost:4000/songs", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -18,24 +26,27 @@ function NewCommentForm() {
         // add logic for comment
     }
 
+    const handleCommentSubmit = (e) => {
+        
+    }
+
     return (
         <div>
             <h3>Add A Comment!</h3>
-                <Form
-                onSubmit={() => {
-                    console.log('Submitting New Comment')
-                }}
-                >
-                <Form.Group widths='equal'>
-                    <Form.Input
-                    type="input"
-                    id="comment"
-                    fluid label="Comment" 
-                    placeholder="Comment" 
-                    name="Comment"/>
-                </Form.Group>
-                <Form.Button>Submit Comment</Form.Button>
+                <Form onSubmit={handleCommentSubmit}>
+                    <Form.Group widths='equal'>
+                            <Form.Control
+                                style={{height: "100px"}}
+                                as="textarea"
+                                id="comment"
+                                fluid label="Comment" 
+                                placeholder="Add a Comment" 
+                                name="Comment"/>
+                    </Form.Group>
+                    <Button variant="primary" type="submit">Submit Comment Bitch</Button> 
                 </Form>
         </div>
     )
 }
+
+export default NewCommentForm;
