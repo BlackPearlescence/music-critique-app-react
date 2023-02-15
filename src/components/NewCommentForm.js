@@ -2,29 +2,29 @@ import React from 'react';
 import Form from 'react-bootstrap/Form'
 import CommentCard from './CommentCard'
 import CommentList from './CommentList'
-import { MDBTypography, MDBBtn } from 'mdb-react-ui-kit';
 
 function NewCommentForm({setComments}) {
 
-    function handleClick(event) {  
+
+        function handleClick(event) {
+            event
+        }
 
         function handleSubmit(event) {
             event.preventDefault();
 
             const newComment = document.querySelector('#comment').value
-        }
-
-        fetch(`http://localhost:4000/songs`, {
+            fetch(`http://localhost:4000/songs`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(newComment)
-        })
-        .then(response => response.json())
+            body: JSON.stringify()
+            })
+            .then(response => response.json(newComment))
 
-        setComments(prev => [...prev, newComment])
-    }
+            setComments(prev => [...prev, newComment])
+        }
 
     return (
         <div>
@@ -42,12 +42,11 @@ function NewCommentForm({setComments}) {
                         placeholder="Comment" 
                         name="Comment"/>
                         <div className="w-100">
-                            <MDBTypography tag="h5">Add a Comment</MDBTypography>
                         </div>
                     </Form.Group>
-                    <MDBBtn onClick={handleClick}>
-                    Send <MDBIcon fas icon="long-arrow-alt-right ms-1" />
-                    </MDBBtn>
+                    <button onClick={handleClick}>
+                    Send
+                    </button>
                 </Form>
             </CommentCard>
         </div>

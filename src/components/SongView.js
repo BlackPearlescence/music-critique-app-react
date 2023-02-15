@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CommentList from './CommentList'
-import CommentForm from './CommentForm'
+// import NewCommentForm from './components/NewCommentForm'
 
 function SongView() {
 
@@ -40,7 +40,7 @@ function SongView() {
                 </div>
                 <div className="comments">
                     <CommentList />
-                    <CommentForm />
+                    {/* <NewCommentForm /> */}
                 </div>
             </div>
             )}
