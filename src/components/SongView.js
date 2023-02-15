@@ -1,30 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import CommentList from './CommentList';
-import {useParams} from "react-router-dom";
-import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import CommentList from './CommentList'
 
 function SongView() {
+
     const [toggleInfo, setToggleInfo] = useState(true)
-    const [songInfo, setSongInfo] = useState({})
-    const {id} = useParams();
 
     function handleToggle(event) {
         setToggleInfo(prev => !prev)
     }
-
-    useEffect(()=>{
-        fetch(`http://localhost:4000/songs/${id}`)
-            .then((res) => (res.json()))
-            .then((songData) => setSongInfo(songData))
-    }, [id])
-
 
     return (
         <div className="card" >
             <div className="content">
                 <span className="header">
                     {/* <img {this is where the image for the song/album will go}/> */}
-                    <h1>{songInfo.title}</h1>
+                    <h1>SONG TITLE</h1>
                     <h3>SONG ARTIST</h3>
                 </span>
                 <div className="meta">
@@ -34,7 +24,7 @@ function SongView() {
                 </div>
                 <div>
                     <button className="toggle" onClick={handleToggle}>
-                        {toggleInfo ? 'Hide Details' :'Click for Additional Details' }</button>
+                        {toggleInfo ? 'Click for Additional Details' : 'Hide Details'}</button>
                         {toggleInfo && (
             <div>
                   <div className="description">

@@ -41,7 +41,7 @@ import Header from "./components/Header.js";
 
           <Route path="/songoftheday" element={<SongOfTheDay/>} />
 
-          <Route path="/songs/:id/view" element={<SongView />}/>
+          <Route path="/:id/view" element={<SongView />}/>
         </Routes>
        
     </div>

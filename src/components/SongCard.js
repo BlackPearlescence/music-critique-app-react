@@ -1,6 +1,5 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import {Link} from "react-router-dom"
 
 function SongCard({song}){
     return(
@@ -21,9 +20,7 @@ function SongCard({song}){
                }) : song.genre}
                </Card.Text>
                <div className="d-grid gap-2">
-                <Link to={`/songs/${song.id}/view`}>
-                    <Button variant="primary" size="lg">View</Button>
-                </Link>
+                <Button variant="primary" size="lg">View</Button>
                 <Button variant="danger" size="lg">
                     Delete
                 </Button>
