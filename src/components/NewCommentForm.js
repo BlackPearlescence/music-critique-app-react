@@ -39,5 +39,3 @@ function NewCommentForm() {
         </div>
     )
 }
-
-export default NewCommentForm;

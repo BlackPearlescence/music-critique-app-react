@@ -3,10 +3,10 @@ import CommentList from './CommentList'
 
 function SongView() {
 
-    const [showInfo, setShowInfo] = useState(true)
+    const [toggleInfo, setToggleInfo] = useState(true)
 
-    function handleClick() {
-        setShowInfo(prev => !prev)
+    function handleToggle(event) {
+        setToggleInfo(prev => !prev)
     }
 
     return (
@@ -23,9 +23,9 @@ function SongView() {
                     </span>
                 </div>
                 <div>
-                    <button className="toggle" onClick={handleClick}>
-                        {showInfo ? 'Click for Additional Details' : 'Hide Details'}</button>
-                        {showInfo && (
+                    <button className="toggle" onClick={handleToggle}>
+                        {toggleInfo ? 'Click for Additional Details' : 'Hide Details'}</button>
+                        {toggleInfo && (
             <div>
                   <div className="description">
                     <p>SONG GENRES</p>
