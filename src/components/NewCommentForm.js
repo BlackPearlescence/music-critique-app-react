@@ -18,24 +18,24 @@ function NewCommentForm() {
         // add logic for comment
     }
 
+    const handleCommentSubmit = (e) => {
+
+    }
+
     return (
         <div>
             <h3>Add A Comment!</h3>
-                <Form
-                onSubmit={() => {
-                    console.log('Submitting New Comment')
-                }}
-                >
-                <Form.Group widths='equal'>
-                    <Form.Input
-                    type="input"
-                    id="comment"
-                    fluid label="Comment" 
-                    placeholder="Comment" 
-                    name="Comment"/>
-                </Form.Group>
-                <Form.Button>Submit Comment</Form.Button>
-=======
+                <Form onSubmit={handleCommentSubmit}>
+                    <Form.Group widths='equal'>
+                            <Form.Control
+                                style={{height: "100px"}}
+                                as="textarea"
+                                id="comment"
+                                fluid label="Comment" 
+                                placeholder="Add a Comment" 
+                                name="Comment"/>
+                    </Form.Group>
+                    <Button variant="primary" type="submit">Submit Comment!</Button> 
                 </Form>
         </div>
     )
