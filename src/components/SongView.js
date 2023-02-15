@@ -14,6 +14,7 @@ function SongView() {
 
     useEffect(()=>{
         fetch(`http://localhost:4000/songs/${id}`)
+//feafgeafae
             .then((res) => (res.json()))
             .then((songData) => setSongInfo(songData))
     }, [id])
@@ -25,7 +26,7 @@ function SongView() {
                 <span className="header">
                     {/* <img {this is where the image for the song/album will go}/> */}
                     <h1>{songInfo.title}</h1>
-                    
+
                     <h3>SONG ARTIST</h3>
                 </span>
                 <div className="meta">
