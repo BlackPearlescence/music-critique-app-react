@@ -43,10 +43,10 @@ import Header from "./components/Header.js";
 
           <Route path="/:id/view" element={<SongView />}/>
         </Routes>
-        <NewCommentForm 
+        {/* <NewCommentForm 
         comments={comments}
         setComments={setComments}
-        />
+        /> */}
        
     </div>
   );
