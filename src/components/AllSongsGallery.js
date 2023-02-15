@@ -76,7 +76,6 @@ function AllSongsGallery({songs = [], setSongs, genres}){
 
     return(
         <div>
-             
             <Search songs={songs}
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
