@@ -1,28 +1,72 @@
-
-{"songs": [
+{
+  "genres": [
+    {
+      "id": 1,
+      "genre": "Afropop"
+    },
+    {
+      "id": 2,
+      "genre": "R&B"
+    },
+    {
+      "id": 3,
+      "genre": "Rap"
+    },
+    {
+      "id": 4,
+      "genre": "Soul"
+    },
+    {
+      "id": 5,
+      "genre": "Eskibeat"
+    },
+    {
+      "id": 6,
+      "genre": "Grime"
+    },
+    {
+      "id": 7,
+      "genre": "Nigerian Alté"
+    },
+    {
+      "id": 8,
+      "genre": "Pop"
+    },
+    {
+      "id": 9,
+      "genre": "Electropop"
+    },
+    {
+      "id": 10,
+      "genre": "Hip-Hop"
+    }
+  ],
+  "songs": [
     {
       "id": 1,
       "title": "Rags2Riches 2 (feat. Lil Baby)",
       "artist": "Rod Wave",
       "album": "Pray 4 Love",
-      "genre": ["Hip-Hop",
-                "Rap"],
+      "genre": [
+        "Hip-Hop",
+        "Rap"
+      ],
       "description": "Melodic slow-beat song with catchy, meaningful lyrics",
       "length": "3:55",
       "year_released": "2020",
       "songUrl": "https://open.spotify.com/track/40TPiJpvwGIyvPjJMDTKfy?si=73ce472775324d18&nd=1",
-      "image":"https://i1.sndcdn.com/artworks-F58uMh49zJBqTyd7-4iiwnw-t500x500.jpg",
+      "image": "https://i1.sndcdn.com/artworks-F58uMh49zJBqTyd7-4iiwnw-t500x500.jpg",
       "upvotes": 0,
       "downvotes": 10,
       "comments": [
-          {
-            "commentText": "Great to vibe with on a rainy day",
-            "likes": 80
-          },
-          {
-            "commentText": "Throw this on when you need some inspiration",
-            "likes": 10
-          }
+        {
+          "commentText": "Great to vibe with on a rainy day",
+          "likes": 80
+        },
+        {
+          "commentText": "Throw this on when you need some inspiration",
+          "likes": 10
+        }
       ]
     },
     {
@@ -30,8 +74,10 @@
       "title": "Outta My System (feat. T-Pain & Johnta Austin)",
       "artist": "Bow Wow",
       "album": "The Price of Fame",
-      "genre": ["Hip-Hop",
-      "Rap"],
+      "genre": [
+        "Hip-Hop",
+        "Rap"
+      ],
       "description": "Sad analysis of the feelings someone goes through post-breakup",
       "length": "3:58",
       "year_released": "2006",
@@ -41,12 +87,12 @@
       "downvotes": 10,
       "comments": [
         {
-            "commentText" : "An oldie that still holds up well!",
-            "likes": 30
+          "commentText": "An oldie that still holds up well!",
+          "likes": 30
         },
         {
-            "commentText": "Bow Wow and T-Pain were a formidable force back in '06",
-            "likes": 23
+          "commentText": "Bow Wow and T-Pain were a formidable force back in '06",
+          "likes": 23
         }
       ]
     },
@@ -55,8 +101,10 @@
       "title": "Dis Ain't What You Want",
       "artist": "Lil Durk",
       "album": "The Tape",
-      "genre": ["Hip-Hop",
-      "Rap"],
+      "genre": [
+        "Hip-Hop",
+        "Rap"
+      ],
       "description": "Energetic anthem aimed at all those trying to take away what Lil Durk has earned",
       "length": "4:05",
       "year_released": "2013",
@@ -66,23 +114,29 @@
       "downvotes": 10,
       "comments": [
         {
-            "commentText" : "Throw this on at the gym",
-            "likes": 10
+          "user": "Penelope",
+          "icon": "",
+          "commentText": "Throw this on at the gym",
+          "likes": 10
         },
         {
-            "commentText" : "Pumps me up every time. I could run through a brick wall right now!",
-            "likes": 5
+          "user": "fafgeafae",
+          "icon": "",
+          "commentText": "Pumps me up every time. I could run through a brick wall right now!",
+          "likes": 5
         }
-       ]
+      ]
     },
     {
       "id": 4,
       "title": "Escapism.",
       "artist": "Raye",
       "album": "My 21st Century Blues",
-      "genre": ["Hip-Hop",
-      "Electropop",
-      "R&B"],
+      "genre": [
+        "Hip-Hop",
+        "Electropop",
+        "R&B"
+      ],
       "description": "A song about wild, uninhibited, reckless post-relationship convalescence",
       "length": "4:32",
       "year_released": "2022",
@@ -92,12 +146,12 @@
       "downvotes": 10,
       "comments": [
         {
-            "commentText": "Dealing with break-ups is tough. This sone helped me recover quickly",
-            "likes": 50
+          "commentText": "Dealing with break-ups is tough. This sone helped me recover quickly",
+          "likes": 50
         },
         {
-            "commentText": "While not always the most sound advice, a great track nevertheless",
-            "likes": 20
+          "commentText": "While not always the most sound advice, a great track nevertheless",
+          "likes": 20
         }
       ]
     },
@@ -106,8 +160,10 @@
       "title": "Real",
       "artist": "Tim Lyre",
       "album": "Worry Less",
-      "genre": [ "Pop",
-      "Nigerian Alté"],
+      "genre": [
+        "Pop",
+        "Nigerian Alté"
+      ],
       "description": "Slow-jam Astro-fusion at its best",
       "length": "4:07",
       "year_released": "2021",
@@ -117,9 +173,9 @@
       "downvotes": 10,
       "comments": [
         {
-            "commentText": "An emerging legend on the international music scene"
+          "commentText": "An emerging legend on the international music scene"
         },
-          "Music for a long walk on an overcast afternoon"
+        "Music for a long walk on an overcast afternoon"
       ]
     },
     {
@@ -128,8 +184,9 @@
       "artist": "Wiley",
       "album": "Treddin' On Thin Ice",
       "genre": [
-          "Grime",
-          "Eskibeat" ],
+        "Grime",
+        "Eskibeat"
+      ],
       "description": "Lively post-90's club era jam from an OG British grime artist",
       "length": "3:19",
       "year_released": "2004",
@@ -138,8 +195,8 @@
       "upvotes": 129,
       "downvotes": 11,
       "comments": [
-          "Great throwback to the mid-aughts club days on the West End!",
-          "A leftover from the heyday of UKG"
+        "Great throwback to the mid-aughts club days on the West End!",
+        "A leftover from the heyday of UKG"
       ]
     },
     {
@@ -148,9 +205,10 @@
       "artist": "Devlin",
       "album": "Bud, Sweat, and Beers",
       "genre": [
-          "R&B",
-          "Soul",
-          "Rap"],
+        "R&B",
+        "Soul",
+        "Rap"
+      ],
       "description": "Time capsule of London's nightlife scene circa 2010, longer ago now than anyone cares to admit...",
       "length": "3:03",
       "year_released": "2010",
@@ -159,8 +217,8 @@
       "upvotes": 41348,
       "downvotes": 10,
       "comments": [
-          "Reminds me of my uni days",
-          "Great homage to a great city"
+        "Reminds me of my uni days",
+        "Great homage to a great city"
       ]
     },
     {
@@ -168,8 +226,10 @@
       "title": "SAD GIRLS LUV MONEY Remix (feat. Kali Uchis nd Moliy)",
       "artist": "Amaarae",
       "album": "The Angel You Don't Know",
-      "genre": ["R&B",
-              "Afropop" ],
+      "genre": [
+        "R&B",
+        "Afropop"
+      ],
       "description": "Infectious dance track that never fails to lighten the mood",
       "length": "3:24",
       "year_released": "2021",
@@ -178,9 +238,113 @@
       "upvotes": 2,
       "downvotes": 100,
       "comments": [
-          "Who doesn't luv money?",
-          "Impossible to fight the urge to dance when this one's on!"
+        "Who doesn't luv money?",
+        "Impossible to fight the urge to dance when this one's on!"
       ]
+    },
+    {
+      "title": "feafea",
+      "artist": "",
+      "album": "",
+      "genre": [
+        "R&B",
+        "Rap"
+      ],
+      "description": "",
+      "songUrl": "",
+      "image": "",
+      "id": 9
+    },
+    {
+      "title": "feafea",
+      "artist": "",
+      "album": "",
+      "genre": [
+        "Soul",
+        "Eskibeat"
+      ],
+      "description": "",
+      "songUrl": "",
+      "image": "",
+      "id": 10
+    },
+    {
+      "title": "efqeafea",
+      "artist": "",
+      "album": "",
+      "genre": [
+        "Grime",
+        "Eskibeat"
+      ],
+      "description": "",
+      "songUrl": "",
+      "image": "",
+      "id": 11
+    },
+    {
+      "title": "efqeafea",
+      "artist": "",
+      "album": "",
+      "genre": [
+        "Grime",
+        "Eskibeat"
+      ],
+      "description": "",
+      "songUrl": "",
+      "image": "",
+      "id": 12
+    },
+    {
+      "title": "efqeafea",
+      "artist": "",
+      "album": "",
+      "genre": [
+        "Grime",
+        "Eskibeat"
+      ],
+      "description": "",
+      "songUrl": "",
+      "image": "",
+      "id": 13
+    },
+    {
+      "title": "efqeafea",
+      "artist": "",
+      "album": "",
+      "genre": [
+        "Grime",
+        "Eskibeat"
+      ],
+      "description": "",
+      "songUrl": "",
+      "image": "",
+      "id": 14
+    },
+    {
+      "title": "efqeafea",
+      "artist": "",
+      "album": "",
+      "genre": [
+        "Grime",
+        "Eskibeat"
+      ],
+      "description": "",
+      "songUrl": "efqeafeaf",
+      "image": "",
+      "id": 15
+    },
+    {
+      "title": "f",
+      "artist": "efqeafeaff",
+      "album": "efqeafeaf",
+      "genre": [
+        "Grime",
+        "Eskibeat"
+      ],
+      "description": "efqeafeaff",
+      "songUrl": "efqeafeaf",
+      "image": "efqeafeaffff",
+      "id": 16
     }
   ]
 }
