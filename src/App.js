@@ -11,6 +11,7 @@ import NewCommentForm from './components/NewCommentForm.js'
 
  function App() {
   const [songs, setSongs] = useState([])
+  const [genres, setGenres] = useState([])
   useEffect(() => {
     const fetchData = async () => {
         const songData = await fetch("http://localhost:4000/songs")
