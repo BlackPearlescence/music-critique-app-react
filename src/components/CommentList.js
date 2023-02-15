@@ -1,6 +1,6 @@
 import React from 'react';
-import CommentCard from './CommentCard'
-import NewCommentForm from './NewCommentForm'
+import CommentCard from './CommentCard';
+import NewCommentForm from './NewCommentForm';
 
 function CommentList() {
 

@@ -9,28 +9,38 @@ import SongView from "./components/SongView.js";
 import Header from "./components/Header.js";
 import NewCommentForm from './components/NewCommentForm.js'
 
-function App() {
+ function App() {
   const [songs, setSongs] = useState([])
-  const [comments, setComments] = useState("")
-
   useEffect(() => {
-    fetch("http://localhost:4000/songs")
-      .then((res) => res.json())
-      .then((songData) => setSongs(songData))
-  },[])
+    const fetchData = async () => {
+        const songData = await fetch("http://localhost:4000/songs")
+        const songJson = await songData.json()
+        console.log(songJson)
+        setSongs(songJson)
 
+        const genreData = await fetch("http://localhost:4000/genres")
+        const genreJson = await genreData.json()
+        console.log(genreJson)
+        setGenres(genreJson)
+    }
+
+    fetchData()
+      .catch((err) => console.log(err))
+     
+
+  },[])
   return (
     <div className="App">
-      {/* <AllSongsGallery songs={songs}/> */}
+      <AllSongsGallery songs={songs} setSongs={setSongs} genres={genres}/>
       <Header />
         <Routes>
           <Route exact path="/" element={<Home/>}/>
 
-          <Route path="/songs" element={<AllSongsGallery songs={songs}/>}/>
+          {/* <Route path="/songs" element={<AllSongsGallery songs={songs} genres={genres}/>}/> */}
 
           <Route path="/songoftheday" element={<SongOfTheDay/>} />
 
-          <Route path="/:id/view" element={<SongView />}/>
+          <Route path="/songs/:id/view" element={<SongView />}/>
         </Routes>
         <NewCommentForm 
         comments={comments}

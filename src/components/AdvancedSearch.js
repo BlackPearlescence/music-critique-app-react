@@ -28,7 +28,7 @@ function AdvancedSearch({songs, filterQuery, setFilterQuery, sortQuery, setSortQ
                         <Form.Select aria-label="Choose a Genre"
                         onChange={handleFilterChange} 
                         value={filterQuery}>
-                            {genres.map(genre => <option>{genre}</option>)}
+                            {genres.map(genre => <option>{genre.genre}</option>)}
                         </Form.Select>
                     </Row>
                     <Row>
