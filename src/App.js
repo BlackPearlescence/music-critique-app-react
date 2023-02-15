@@ -7,6 +7,7 @@ import AllSongsGallery from "./components/AllSongsGallery.js";
 import SongOfTheDay from "./components/SongOfTheDay.js";
 import SongView from "./components/SongView.js";
 import Header from "./components/Header.js";
+import NewCommentForm from './components/NewCommentForm.js'
 
 function App() {
   const [songs, setSongs] = useState([])
