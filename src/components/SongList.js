@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Container  from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form"
 import NewSongForm from "./NewSongForm.js";
-function SongList({songs}){
+function SongList({songs, genres}){
     
     return(
         <div>
