@@ -12,22 +12,21 @@ function NewCommentForm() {
     })
 
     function handleClick(event) {
-        const newComment = document.querySelector('#comment').value
 
         fetch("http://localhost:4000/songs", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(newComment)
+            body: JSON.stringify(commentForm)
         })
         .then(response => response.json())
 
-        // add logic for comment
+        setCommentForm(prev => [...prev, commentForm])
     }
 
     const handleCommentSubmit = (e) => {
-
+        handleClick();
     }
 
     return (
@@ -43,7 +42,8 @@ function NewCommentForm() {
                                 placeholder="Add a Comment" 
                                 name="Comment"/>
                     </Form.Group>
-                    <Button variant="primary" type="submit">Submit Comment!</Button> 
+                    <Button variant="primary" type="submit"
+                    onClick={handleClick}>Submit Comment!</Button> 
                 </Form>
         </div>
     )
