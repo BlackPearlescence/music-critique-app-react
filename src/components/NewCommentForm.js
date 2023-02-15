@@ -35,6 +35,7 @@ function NewCommentForm() {
                     name="Comment"/>
                 </Form.Group>
                 <Form.Button>Submit Comment</Form.Button>
+=======
                 </Form>
         </div>
     )
