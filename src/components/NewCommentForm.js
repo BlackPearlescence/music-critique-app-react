@@ -23,37 +23,41 @@ function NewCommentForm({comments = [], setComments,songs,setSongs,songId}) {
     // }
 
     const handleCommentSubmit = (e) => {
-        e.preventDefault()
         const form = e.currentTarget
+        e.preventDefault()
+
         setValidated(false)
-        if(form.checkValidity() === true){
+        if(form.checkValidity() === false){
             e.stopPropagation()
         }
-        const newComment = {
-            id: v4(),
-            username: "Me!",
-            icon: "https://s.abcnews.com/images/US/fox-01-as-gty-181019_hpMain_4x3t_992.jpg",
-            commentText: commentField,
-            likes: 0,
+        else{
+            const newComment = {
+                id: v4(),
+                username: "Me!",
+                icon: "https://s.abcnews.com/images/US/fox-01-as-gty-181019_hpMain_4x3t_992.jpg",
+                commentText: commentField,
+                likes: 0,
+            }
+    
+            const updatedComments = [...comments, newComment]
+            // const updatedSongs = [...songs]
+            // updatedSongs.comments = updatedComments
+            // setSongs(updatedSongs)
+    
+    
+            fetch(`http://localhost:4000/songs/${songId}`,{
+                method: "PATCH",
+                headers: {
+                    "Content-Type" : "application/json",
+                },
+                body: JSON.stringify({comments: updatedComments})
+            })
+    
+            setComments([...comments, newComment])
+            
+            setValidated(true)
         }
-
-        const updatedComments = [...comments, newComment]
-        // const updatedSongs = [...songs]
-        // updatedSongs.comments = updatedComments
-        // setSongs(updatedSongs)
-
-
-        fetch(`http://localhost:4000/songs/${songId}`,{
-            method: "PATCH",
-            headers: {
-                "Content-Type" : "application/json",
-            },
-            body: JSON.stringify({comments: updatedComments})
-        })
-
-        setComments([...comments, newComment])
         
-        setValidated(true)
     }
 
 

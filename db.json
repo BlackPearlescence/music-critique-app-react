@@ -102,17 +102,8 @@
       "songUrl": "https://open.spotify.com/track/6qzKyme6MzOV3WJ0Qi0MMx?si=d60c3ac328e74240&nd=1",
       "image": "https://i.scdn.co/image/ab67616d0000b273123fa142338bf0c670ce5ec5",
       "upvotes": 40,
-      "downvotes": 10,
-      "comments": [
-        {
-          "commentText": "Throw this on at the gym",
-          "likes": 10
-        },
-        {
-          "commentText": "Pumps me up every time. I could run through a brick wall right now!",
-          "likes": 5
-        }
-      ]
+      "downvotes": 11,
+      "comments": []
     },
     {
       "id": 4,
