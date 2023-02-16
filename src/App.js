@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
  function App() {
   const [songs, setSongs] = useState([])
   const [genres, setGenres] = useState([])
+  const [bestSong, setBestSong] = useState(null)
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -40,9 +41,9 @@ import { useNavigate } from "react-router-dom";
 
           <Route path="/songs" element={<AllSongsGallery songs={songs} setSongs={setSongs} genres={genres}/>}/>
 
-          <Route path="/songoftheday" element={<SongOfTheDay/>} />
+          <Route path="/songoftheday" element={<SongOfTheDay bestSong={bestSong} />} />
 
-          <Route path="/songs/:id/view" element={<SongView songs={songs} setSongs={setSongs} />}/>
+          <Route path="/songs/:id/view" element={<SongView songs={songs} setSongs={setSongs} bestSong={bestSong} setBestSong={setBestSong} />}/>
         </Routes>
         {/* <NewCommentForm 
         comments={comments}

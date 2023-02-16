@@ -4,7 +4,7 @@ import {useParams} from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
 
-function SongView({songInfos, setSongInfos}) {
+function SongView({bestSong, setBestSong}) {
     const [toggleInfo, setToggleInfo] = useState(false)
     const [songInfo, setSongInfo] = useState({})
     const {id} = useParams();
@@ -40,6 +40,11 @@ function SongView({songInfos, setSongInfos}) {
             body: JSON.stringify(voteType)
         })
     }
+
+    const handleBestSongSelection = (e) => {
+        setBestSong(songInfo)
+        console.log(bestSong)
+    }
     return (
         <Card>
             <Card.Title>{songInfo.title}</Card.Title>
@@ -69,7 +74,8 @@ function SongView({songInfos, setSongInfos}) {
             <Card.Footer>
                 <Button variant="primary" onClick={handleUpvotes} name="upvotes">Upvote 👍: {songInfo.upvotes} </Button>
                 <Button variant="danger" onClick={handleDownvotes}  name="downvotes">Downvote 👎: {songInfo.downvotes}</Button>
-                <CommentList  songId={id} songInfos={songInfos} setsongInfos={setSongInfos} commentData={songInfo.comments}/>
+                <Button variant="success" onClick={handleBestSongSelection} name="bestsong">Make this your Song of the Day!</Button>
+                <CommentList  songId={id} songInfo={songInfo} setSongInfo={setSongInfo} commentData={songInfo.comments}/>
             </Card.Footer>
         </Card>
     //     <div className="card" >

@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
   const [allSongs, setAllSong] = useState([])
+  const navigate = useNavigate()
 
   const mostPopularSong = useEffect(() => {
     // fetch the 3 most recently added projects from json-server
@@ -36,7 +37,7 @@ function Home() {
 
       <Carousel fade className="carousel">
         {allSongs.map(song => 
-          <Carousel.Item>
+          <Carousel.Item onClick={(e) => {navigate(`/songs/${song.id}/view`)}}>
             <img
           className="d-block w-100"
           src={song.image}
