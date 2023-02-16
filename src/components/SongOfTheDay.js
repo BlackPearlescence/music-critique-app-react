@@ -6,15 +6,15 @@ function SongOfTheDay({bestSong, setBestSong}){
 
     const navigate = useNavigate();
     const [artistData, setArtistData] = useState([])
-    // require(`dotenv`).config()
-    // const apiKey = process.env.API_KEY;
+    require(`dotenv`).config()
+    const apiKey = process.env.API_KEY;
 
     
 
-    // useEffect(() => {
-    //     console.log(apiKey)
-    //     fetch(`https://api.musixmatch.com/ws/v1.1/track.get?apikey=${apiKey}`)
-    // }, [])
+    useEffect(() => {
+        console.log(apiKey)
+        fetch(`https://api.musixmatch.com/ws/v1.1/track.get?apikey=${apiKey}`)
+    }, [])
 
     return(
         <Container>
