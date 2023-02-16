@@ -49,7 +49,7 @@ function CommentCard({songId, songs, setSongs, comments = [], setComments, comme
         })
     }
     return (
-        <Card>
+        <Card bg="dark">
             <Card.Title>{comment.username}</Card.Title>
             <Image roundedCircle src={comment.icon} width="80" height="80"/>
             <Card.Body>

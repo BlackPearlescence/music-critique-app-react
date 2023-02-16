@@ -46,7 +46,7 @@ function SongView({bestSong, setBestSong}) {
         console.log(bestSong)
     }
     return (
-        <Card>
+        <Card bg="dark">
             <Card.Title>{songInfo.title}</Card.Title>
             <Card.Img src={songInfo.image}/>
             <Card.Body>

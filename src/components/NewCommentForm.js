@@ -70,7 +70,7 @@ function NewCommentForm({comments = [], setComments,songs,setSongs,songId}) {
     return (
         <div>   
             <h3>Add A Comment!</h3>
-                <Form noValidate validated={validated} onSubmit={handleCommentSubmit}>
+                <Form noValidate validated={validated}  onSubmit={handleCommentSubmit}>
                     <Form.Group widths='equal'>
                             <Form.Control
                                 style={{height: "100px"}}

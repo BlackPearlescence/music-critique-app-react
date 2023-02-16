@@ -7,7 +7,7 @@ function CommentList({songId, songs, setSongs, commentData = []}) {
 
     const [comments, setComments] = useState(commentData);
     return (
-        <div className="commentList">
+        <div className="commentList" >
             {comments.map(comment => 
             <CommentCard 
             key={comment.id}

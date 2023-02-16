@@ -16,7 +16,7 @@ function SongCard({songs, setSongs, song}){
         setSongs(songs.filter(songItem => songItem !== song ))
     }
     return(
-        <Card style={{ width: "18rem" }} >
+        <Card style={{ width: "18rem" }} bg="dark" >
             <Card.Img variant="top" src={song.image} />
             <Card.Body>
                 <Card.Title>{song.title}</Card.Title>
