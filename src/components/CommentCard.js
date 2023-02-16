@@ -49,13 +49,13 @@ function CommentCard({songId, songs, setSongs, comments = [], setComments, comme
         })
     }
     return (
-        <Card bg="dark">
+        <Card bg="light">
             <Card.Title>{comment.username}</Card.Title>
             <Image roundedCircle src={comment.icon} width="80" height="80"/>
             <Card.Body>
                 <Card.Text>{comment.commentText}</Card.Text>
-                <Button onClick={handleLikeIncrement}>Likes: {likes}</Button>
-                <Button variant="danger" onClick={handleCommentDelete}>Delete</Button>
+                <button onClick={handleLikeIncrement}>Likes: {likes}</button>
+                <button variant="danger" onClick={handleCommentDelete}>Delete</button>
             </Card.Body>
         </Card>
     )

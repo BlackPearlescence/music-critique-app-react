@@ -12,7 +12,7 @@ function Gallery({ allSongs }) {
             <img className="card" src={song.image} alt={song.title}/>
             <Carousel.Caption>
               <h3>{song.title}</h3>
-              <p>{song.desc}</p>
+              {/* <p>{song.desc}</p> */}
             </Carousel.Caption>
           </Carousel.Item>
         )

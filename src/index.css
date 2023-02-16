@@ -216,7 +216,7 @@ select:focus {
   max-width: 400px;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  /* border: 2px solid var(--dark-turquoise); */
+  border: 2px solid var(--dark-turquoise);
 }
 
 @media screen and (max-width: 588px) {
@@ -344,10 +344,11 @@ header h1 a:hover {
 }
 
 .project-image img {
-  width: 100%;
+  width: 50%;
   max-width: 1000px;
   display: block;
   margin-bottom: 2rem;
+  margin: 0 auto;
 }
 
 .about {

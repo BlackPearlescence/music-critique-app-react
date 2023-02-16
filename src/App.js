@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 
  function App() {
   const [songs, setSongs] = useState([])
-  const [isDarkMode, setIsDarkMode] = useState(true)
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   const onToggleDarkMode = () => {
     setIsDarkMode((isDarkMode) => !isDarkMode);

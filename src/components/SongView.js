@@ -3,8 +3,15 @@ import CommentList from './CommentList';
 import {useParams} from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
+import {Pie} from  "react-chartjs-2"
+import { Chart as ChartJS, ArcElement, Tooltip, Legend} from "chart.js"
+
+
 
 function SongView({bestSong, setBestSong}) {
+
+    ChartJS.register(ArcElement, Tooltip, Legend);
+
     const [toggleInfo, setToggleInfo] = useState(false)
     const [songInfo, setSongInfo] = useState({})
     const {id} = useParams();
@@ -52,6 +59,35 @@ function SongView({bestSong, setBestSong}) {
             <img src={songInfo.image}  alt={songInfo.name} />
             </div>
 
+            <div>
+                 {songInfo ? <Pie  data={{
+        labels: ["Downvotes","Upvotes"],
+        datasets: [
+            {
+                label: "Vote Distribution",
+                data: [songInfo.downvotes,songInfo.upvotes],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                  ],
+                  borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                  ],
+                  borderWidth: 1,
+            }
+        ],
+        data: [10, 20],
+    } }/> : null}
+            </div>
             <div className="details">
                 <h2>{songInfo.artist}</h2>
                 <p>{songInfo.album}</p>

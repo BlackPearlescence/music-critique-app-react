@@ -32,8 +32,27 @@ function Home({isDarkMode}) {
         and discover the magic of music together!
       </p>
       <h3 style= {{ margin: '2rem 0' }}>Top Rated Songs</h3>
+{/* 
+      {allSongs.map((song) => (
+          <img src={song.image} key={song.id} alt={song.title} />
+        ))} */}
 
-      <Gallery allSongs={allSongs}/>
+      <Carousel fade className="carousel">
+        {allSongs.map(song => 
+          <Carousel.Item onClick={(e) => {navigate(`/songs/${song.id}/view`)}}>
+            <img
+          className="d-block w-100"
+          src={song.image}
+          alt={song.title}
+            />
+            <Carousel.Caption>
+              <h3>{song.title}</h3>
+              <p>{song.description}</p>
+            </Carousel.Caption>
+          </Carousel.Item>)}
+      </Carousel>
+
+      {/* <Gallery allSongs={allSongs}/> */}
 
       <div style={{ margin: '1rem 0' }}>
         <Link to="/songs">

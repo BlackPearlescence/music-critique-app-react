@@ -10,14 +10,8 @@ function NewCommentForm({comments = [], setComments,songs,setSongs,songId}) {
 
     // function handleClick(event) {
 
-    //     fetch(``, {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(newComment)
-    //     })
-    //     .then(response => response.json())
+        // setCommentField(prev => [...prev, commentField])
+    
 
     //     // add logic for comment
     // }
@@ -89,5 +83,4 @@ function NewCommentForm({comments = [], setComments,songs,setSongs,songId}) {
         </div>
     )
 }
-
 export default NewCommentForm;
