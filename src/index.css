@@ -357,3 +357,9 @@ header h1 a:hover {
 
 /* Bootstrap styles */
 
+.carousel {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+

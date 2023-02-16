@@ -69,6 +69,7 @@ function SongView({songInfos, setSongInfos}) {
             <Card.Footer>
                 <Button variant="primary" onClick={handleUpvotes} name="upvotes">Upvote 👍: {songInfo.upvotes} </Button>
                 <Button variant="danger" onClick={handleDownvotes}  name="downvotes">Downvote 👎: {songInfo.downvotes}</Button>
+                <CommentList  songId={id} songInfos={songInfos} setsongInfos={setSongInfos} commentData={songInfo.comments}/>
             </Card.Footer>
         </Card>
     //     <div className="card" >
