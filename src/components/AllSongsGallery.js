@@ -16,7 +16,7 @@ function AllSongsGallery({songs = [], setSongs, genres,isDarkMode}){
     const [filterQuery, setFilterQuery] = useState ("All")
     const [sortQuery, setSortQuery] = useState("Song Title")
     const [showForm, setShowForm] = useState(false);
-    
+
 
 
 
@@ -44,7 +44,7 @@ function AllSongsGallery({songs = [], setSongs, genres,isDarkMode}){
 
     // Filter by genre
     const filteredList = filterQuery === "All" ? searchedList : searchedList.filter(song => song.genre.includes(filterQuery))
-    
+
 
     // const genreList = genres.map(genre => <ToggleButton onClick={handleGenreAdditionClick} key={uuidv4()} variant="info" >{genre}</ToggleButton>)
     // Sorting the Song Length is a little tricky because the length is in the form of a string (ex: "3:22")
@@ -89,7 +89,7 @@ function AllSongsGallery({songs = [], setSongs, genres,isDarkMode}){
                 break;
         }
     }, [sortQuery])
-    
+
 
     const handleShowNewSongForm = (e) => {
         setShowForm(true);
@@ -114,16 +114,19 @@ function AllSongsGallery({songs = [], setSongs, genres,isDarkMode}){
             setSortQuery={setSortQuery}
             //Sort list of genres in alphabetical order
             genres={genres}/>
-            <Button variant="success" onClick={handleShowNewSongForm}>Add a New Song!</Button>
-            <NewSongForm 
+            <section>
+            <button className="button-newSong" onClick={handleShowNewSongForm}>Add a New Song!</button>
+            </section>
+
+            <NewSongForm
             showForm={showForm}
             setShowForm={setShowForm}
             genres={genres}
             songs={songs}
             setSongs={setSongs}
             // genres={genres.slice(1).sort((a,b) => a.localeCompare(b))}
-            />  
-            <SongList 
+            />
+            <SongList
             songs={filteredList}
             setSongs={setSongs}/>
         </div>

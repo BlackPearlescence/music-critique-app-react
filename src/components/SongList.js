@@ -12,21 +12,11 @@ function SongList({songs,setSongs, genres}){
     })
 
     return(
-<>
-        {/* <div>
-            <Container>
-                <Row>
-                    <NewSongForm/>
-                    {songs.map(song => <SongCard setSongs={setSongs} key={song.id} songs={songs} song={song}/>)}
-
-                </Row>
-            </Container>
-        </div> */}
         <section>
         <ul className="cards">{songItem}</ul>
         </section>
 
-         </>
+
     );
 
 }

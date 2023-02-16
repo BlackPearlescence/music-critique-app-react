@@ -103,34 +103,6 @@
       "comments": []
     },
     {
-      "id": 4,
-      "title": "Escapism.",
-      "artist": "Raye",
-      "album": "My 21st Century Blues",
-      "genre": [
-        "Hip-Hop",
-        "Electropop",
-        "R&B"
-      ],
-      "description": "A song about wild, uninhibited, reckless post-relationship convalescence",
-      "length": "4:32",
-      "year_released": "2022",
-      "songUrl": "https://open.spotify.com/track/5Z2MiIZ5I3jJvvmeWMLbOQ?si=d43b098295a848c4&nd=1",
-      "image": "https://upload.wikimedia.org/wikipedia/en/3/3a/Raye_-_Escapism.png",
-      "upvotes": 2,
-      "downvotes": 10,
-      "comments": [
-        {
-          "commentText": "Dealing with break-ups is tough. This sone helped me recover quickly",
-          "likes": 50
-        },
-        {
-          "commentText": "While not always the most sound advice, a great track nevertheless",
-          "likes": 20
-        }
-      ]
-    },
-    {
       "id": 5,
       "title": "Real",
       "artist": "Tim Lyre",
