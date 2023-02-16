@@ -20,6 +20,7 @@
   --color: var(--white);
   --background: var(--black);
   --primary: var(--fuschia);
+  --bootstrapPrimary: #0a58ca
 }
 
 /* layout */
@@ -123,8 +124,8 @@ a {
 }
 
 a:hover {
-  background-color: var(--blue);
-  border-bottom: 1px solid var(--blue);
+  background-color: var(--bootstrapPrimary);
+  border-bottom: 1px solid var(--bootstrapPrimary);
 }
 
 /* header */

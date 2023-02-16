@@ -18,8 +18,8 @@ function Home({isDarkMode}) {
 
   return (
     <section className={isDarkMode ? 'App' : 'App.light'}>
-      
-    <Gallery allSongs={allSongs}/>
+
+    {/* <Gallery allSongs={allSongs}/> */}
       <h2 style={{ fontSize: '3rem' }}>Welcome to Sound Savant</h2>
       <p className="body-text">
         Welcome to the Music App Project! This project is designed to allow
@@ -39,7 +39,7 @@ function Home({isDarkMode}) {
       </section> */}
 
       <Carousel fade className="carousel">
-        {allSongs.map(song => 
+        {allSongs.map(song =>
           <Carousel.Item onClick={(e) => {navigate(`/songs/${song.id}/view`)}}>
             <img
           className="d-block w-100"
@@ -59,7 +59,7 @@ function Home({isDarkMode}) {
             View All Songs
           </Button>
         </Link>
-        
+
       </div>
     </section>
   );
