@@ -60,10 +60,14 @@
       "downvotes": 10,
       "comments": [
         {
+          "username": "ducksauce",
+          "icon": "degfeageag.jpg",
           "commentText": "Great to vibe with on a rainy day",
           "likes": 80
         },
         {
+          "username": "ducksauce",
+          "icon": "degfeageag.jpg",
           "commentText": "Throw this on when you need some inspiration on dogs",
           "likes": 10
         }
@@ -87,8 +91,8 @@
       "downvotes": 10,
       "comments": [
         {
-            "commentText" : "An oldie that still holds up well!",
-            "likes": 30
+          "commentText": "An oldie that still holds up well!",
+          "likes": 30
         },
         {
           "commentText": "Bow Wow and T-Pain were a formidable force back in '06",
@@ -114,12 +118,12 @@
       "downvotes": 10,
       "comments": [
         {
-            "commentText" : "Throw this on at the gym",
-            "likes": 10
+          "commentText": "Throw this on at the gym",
+          "likes": 10
         },
         {
-            "commentText" : "Pumps me up every time. I could run through a brick wall right now!",
-            "likes": 5
+          "commentText": "Pumps me up every time. I could run through a brick wall right now!",
+          "likes": 5
         }
       ]
     },

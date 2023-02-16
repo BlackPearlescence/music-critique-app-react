@@ -22,7 +22,7 @@ import Header from "./components/Header.js";
         const genreData = await fetch("http://localhost:4000/genres")
         const genreJson = await genreData.json()
         console.log(genreJson)
-        setGenres(genreJson)
+        setGenres([...genreJson])
     }
 
     fetchData()
@@ -37,11 +37,11 @@ import Header from "./components/Header.js";
         <Routes>
           <Route exact path="/" element={<Home/>}/>
 
-          {/* <Route path="/songs" element={<AllSongsGallery songs={songs} genres={genres}/>}/> */}
+          <Route path="/songs" element={<AllSongsGallery songs={songs} genres={genres}/>}/>
 
           <Route path="/songoftheday" element={<SongOfTheDay/>} />
 
-          <Route path="/:id/view" element={<SongView />}/>
+          <Route path="/songs/:id/view" element={<SongView />}/>
         </Routes>
         {/* <NewCommentForm 
         comments={comments}

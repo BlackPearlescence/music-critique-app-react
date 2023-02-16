@@ -1,16 +1,14 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import InputGroup from "react-bootstrap/InputGroup";
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
 import { useEffect, useState } from "react";
 import {v4 as uuidv4} from "uuid"
-import { Badge, Col, ToggleButton, ToggleButtonGroup, FloatingLabel} from "react-bootstrap";
+import { Badge, Col, ToggleButton, ToggleButtonGroup, FloatingLabel, Alert} from "react-bootstrap";
 function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
     console.log(genres)
     const [isUndo, setIsUndo] = useState(false);
     const [genresChosen, setGenresChosen] = useState([]);
+    const [showCreateAlert, setShowCreateAlert] = useState(false);
     const [newSongFormData, setNewSongFormData] = useState({
         title: "",
         artist: "",
@@ -51,7 +49,7 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
         console.log(newSong)
         newSong.id = uuidv4()
         setSongs([...songs, newSong])
-
+        setShowForm(false)
     }
 
     const handleFormChange = (e) => {
@@ -59,6 +57,10 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
         const {name, value} = e.target;
         setNewSongFormData({...newSongFormData, [name]: value})
         console.log(newSongFormData)
+    }
+
+    const handleModalFormClose = (e) => {
+        setShowForm(false)
     }
 
     return(
@@ -105,10 +107,11 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
                 </Modal.Body>
                 <Modal.Footer>
                     <Button type="submit" variant="primary">Add Song</Button>
-                    <Button variant="warning">Undo</Button>
-                    <Button variant="secondary">Close</Button>
+                    <Button  onClick={handleModalFormClose} variant="secondary">Close</Button>
                 </Modal.Footer>
             </Form>
+
+            
             
         </Modal>
 
