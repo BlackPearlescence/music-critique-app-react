@@ -6,10 +6,15 @@ function SongOfTheDay({bestSong, setBestSong}){
 
     const navigate = useNavigate();
     const [artistData, setArtistData] = useState([])
+    // require(`dotenv`).config()
+    // const apiKey = process.env.API_KEY;
 
-    useEffect(() => {
-        fetch(`https://api.musixmatch.com/ws/v1.1/track.get?apikey=${musix}`)
-    }, [])
+    
+
+    // useEffect(() => {
+    //     console.log(apiKey)
+    //     fetch(`https://api.musixmatch.com/ws/v1.1/track.get?apikey=${apiKey}`)
+    // }, [])
 
     return(
         <Container>
@@ -52,15 +57,17 @@ function SongOfTheDay({bestSong, setBestSong}){
                     
                 </Col>
                 <Col>
-                    <Card bg="dark">
+                {bestSong ? <Card bg="dark">
                         <Card.Title>Facts about {bestSong.artist}</Card.Title>
                         <Card.Body>
-                            <Card.Text>He ranks</Card.Text>
+                            <Card.Text>He ranks </Card.Text>
                         </Card.Body>
                         <Card.Footer>
                             <Card.Img src={require("./Type_Extended_Black.png")}/>
                         </Card.Footer>
-                    </Card>
+                    </Card> :
+                    null}
+                    
                 </Col>
             </Row>
             

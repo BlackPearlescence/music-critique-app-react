@@ -73,18 +73,9 @@
       "year_released": "2006",
       "songUrl": "https://open.spotify.com/track/3LGeYNY9aWQuBJovOOowqm?si=b45b86a233f44e5c&nd=1",
       "image": "http://images.genius.com/aaeccb678c5c9313bc6b49f17af6c3b4.1000x1000x1.jpg",
-      "upvotes": 2,
-      "downvotes": 10,
-      "comments": [
-        {
-          "commentText": "An oldie that still holds up well!",
-          "likes": 30
-        },
-        {
-          "commentText": "Bow Wow and T-Pain were a formidable force back in '06",
-          "likes": 23
-        }
-      ]
+      "upvotes": 9,
+      "downvotes": 16,
+      "comments": []
     },
     {
       "id": 3,
