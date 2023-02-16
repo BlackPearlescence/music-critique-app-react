@@ -6,16 +6,19 @@ import { NavLink } from "react-router-dom";
 import Button from "react-bootstrap/Button"
 import NewSongForm from "./NewSongForm.js";
 import {v4 as uuidv4} from "uuid"
-import { Badge, Container } from "react-bootstrap";
+import { Badge, Container, Toast } from "react-bootstrap";
 import ToggleButton  from "react-bootstrap/ToggleButton";
+import Alert from "react-bootstrap/Alert"
 
-function AllSongsGallery({songs = [], setSongs, genres}){
+
+function AllSongsGallery({songs = [], setSongs, genres,isDarkMode}){
     const [searchQuery, setSearchQuery] = useState("")
     const [filterQuery, setFilterQuery] = useState ("All")
     const [sortQuery, setSortQuery] = useState("Song Title")
     const [showForm, setShowForm] = useState(false);
+    
 
-   
+
 
         // console.log(songs)
         // // Obtain a list of genres to display in the Genre Filter Dropdown
@@ -29,10 +32,7 @@ function AllSongsGallery({songs = [], setSongs, genres}){
         // // The first element in the dropdown must always be "All"
         // if(genres[0] != "All"){
         //     setGenres(["All", ...genres])
-        // } 
-    const handleGenreAdditionClick = (e) => {
-
-    }
+        // }
 
     // const genreList = [genres[0], ...genres.slice(1).sort((a,b) => a.localeCompare(b))]
     // console.log(genreList)
@@ -53,29 +53,58 @@ function AllSongsGallery({songs = [], setSongs, genres}){
     //         const a.split(" ")
     //     })
     // }
-    
 
-    switch(sortQuery) {
-        case "Song Title":
-            break;
-        case "Artist Name":
-            break;
-        case "Year":
-            break;
-        case "Length":
-            break;
-        case "Upvotes":
-            break;
-        case "Downvotes":
-            break;
-    }
+    useEffect(()=>{
+        switch(sortQuery) {
+            case "title":
+                setSortQuery(songs.sort((a,b) => a.title.localeCompare(b.title)))
+                break;
+            case "artist":
+                setSortQuery(songs.sort((a,b) => a.artist.localeCompare(b.artist)))
+                break;
+            case "year":
+                setSortQuery(songs.sort((a,b) => parseInt(a.year_released) - parseInt(b.year_released)))
+                break;
+            case "length":
+                setSortQuery(songs.sort((a,b) => {
+                    const first = splitTimeString(a.length)
+                    const second = splitTimeString(b.length)
+                    console.log(first,second)
+
+                    if(first.minutes != second.minutes){
+                        return first.minutes - second.minutes
+                    }
+                    else{
+                        return first.seconds - second.seconds
+                    }
+                }))
+                break;
+            case "upvotes":
+                setSortQuery(songs.sort((a,b) => a.upvotes- b.upvotes))
+                break;
+            case "downvotes":
+                setSortQuery(songs.sort((a,b)=> a.downvotes - b.downvotes))
+                break;
+            default:
+                break;
+        }
+    }, [sortQuery])
+    
 
     const handleShowNewSongForm = (e) => {
         setShowForm(true);
     }
 
+    const splitTimeString =  (timeString) => {
+        const splitTime = timeString.split(":");
+        // [3,"55"]
+        const minutes = parseInt(splitTime[0])
+        const seconds = parseInt(splitTime[1])
+        return {minutes: minutes, seconds: seconds}
+    }
+
     return(
-        <div>
+        <div class={isDarkMode ? 'App' : 'App.light'}>
             <Search songs={songs}
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
@@ -95,7 +124,8 @@ function AllSongsGallery({songs = [], setSongs, genres}){
             // genres={genres.slice(1).sort((a,b) => a.localeCompare(b))}
             />  
             <SongList 
-            songs={filteredList}/>
+            songs={filteredList}
+            setSongs={setSongs}/>
         </div>
     );
 }

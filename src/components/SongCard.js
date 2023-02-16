@@ -1,10 +1,22 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+import Toast from "react-bootstrap/Toast";
+import ToastContainer from "react-bootstrap/ToastContainer";
 
-function SongCard({song}){
+function SongCard({songs, setSongs, song}){
+
+    const handleDeleteSong = (e) => {
+        fetch(`http://localhost:4000/songs/${song.id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type" : "application/json",
+            },
+        })
+        setSongs(songs.filter(songItem => songItem !== song ))
+    }
     return(
-        <Card style={{ width: "18rem" }} >
+        <Card style={{ width: "18rem" }} bg="dark" >
             <Card.Img variant="top" src={song.image} />
             <Card.Body>
                 <Card.Title>{song.title}</Card.Title>
@@ -22,9 +34,9 @@ function SongCard({song}){
                </Card.Text>
                <div className="d-grid gap-2">
                 <Link to={`/songs/${song.id}/view`}>
-                    <Button variant="primary" size="lg">View</Button>
+                    <Button variant="primary" size="lg" onClick={(e) => {console.log("click")}}>View</Button>
                 </Link>
-                <Button variant="danger" size="lg">
+                <Button onClick={handleDeleteSong} variant="danger" size="lg">
                     Delete
                 </Button>
                </div>

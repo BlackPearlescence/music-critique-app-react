@@ -19,6 +19,7 @@ function AdvancedSearch({songs, filterQuery, setFilterQuery, sortQuery, setSortQ
     
     const handleSortChange = (e) => {
         setSortQuery(e.target.value)
+        console.log(e.target.value)
     }
 
     return(
@@ -28,6 +29,7 @@ function AdvancedSearch({songs, filterQuery, setFilterQuery, sortQuery, setSortQ
                         <Form.Select aria-label="Choose a Genre"
                         onChange={handleFilterChange} 
                         value={filterQuery}>
+                            <option>All</option>
                             {genres.map(genre => <option>{genre.genre}</option>)}
                         </Form.Select>
                     </Row>
@@ -35,15 +37,15 @@ function AdvancedSearch({songs, filterQuery, setFilterQuery, sortQuery, setSortQ
                         <Form.Label style={inputTitleStyles}>Sort: </Form.Label>
                         <Col>
                             <Form.Check name="sort" value="title" type="radio" label="Song Title" onChange={handleSortChange}/>
-                            <Form.Check name="sort" value="artist" type="radio" label="Artist Name" />
+                            <Form.Check name="sort" value="artist" type="radio" label="Artist Name" onChange={handleSortChange}/>
                         </Col>
                         <Col>
-                            <Form.Check name="sort" value="year" type="radio" label="Year" />
-                            <Form.Check name="sort" value="length" type="radio" label="Length" />
+                            <Form.Check name="sort" value="year" type="radio" label="Year" onChange={handleSortChange} />
+                            <Form.Check name="sort" value="length" type="radio" label="Length" onChange={handleSortChange}/>
                         </Col>
                         <Col>
-                            <Form.Check name="sort" value="upvotes" type="radio" label="Upvotes" />
-                            <Form.Check name="sort" value="downvotes" type="radio" label="Downvotes" />
+                            <Form.Check name="sort" value="upvotes" type="radio" label="Upvotes" onChange={handleSortChange} />
+                            <Form.Check name="sort" value="downvotes" type="radio" label="Downvotes" onChange={handleSortChange}/>
                         </Col>
                     </Row>
                 </InputGroup>
