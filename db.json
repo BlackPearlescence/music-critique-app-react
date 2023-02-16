@@ -112,7 +112,55 @@
       "image": "https://upload.wikimedia.org/wikipedia/en/3/3a/Raye_-_Escapism.png",
       "upvotes": 2,
       "downvotes": 10,
-      "comments": []
+      "comments": [
+        {
+            "commentText": "Dealing with break-ups is tough. This sone helped me recover quickly",
+            "likes": 50
+        },
+        {
+            "commentText": "While not always the most sound advice, a great track nevertheless",
+            "likes": 20
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Real",
+      "artist": "Tim Lyre",
+      "album": "Worry Less",
+      "genre": [ "Pop",
+      "Nigerian Alté"],
+      "description": "Slow-jam Astro-fusion at its best",
+      "length": "4:07",
+      "year_released": "2021",
+      "songUrl": "https://open.spotify.com/track/0cgIQxMjFoxP2lpV21f4RO?si=854037bbdcb249a4&nd=1",
+      "upvotes": 50,
+      "downvotes": 10,
+      "comments": [
+        {
+            "commentText": "An emerging legend on the international music scene"
+        },
+          "Music for a long walk on an overcast afternoon"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Wot Do U Call It?",
+      "artist": "Wiley",
+      "album": "Treddin' On Thin Ice",
+      "genre": [
+          "Grime",
+          "Eskibeat" ],
+      "description": "Lively post-90's club era jam from an OG British grime artist",
+      "length": "3:19",
+      "year_released": "2004",
+      "songUrl": "https://open.spotify.com/track/1rkC5w0JvpEnXExoWwfbDo?si=ec5dd9cb28914bbd&nd=1",
+      "upvotes": 129,
+      "downvotes": 10,
+      "comments": [
+          "Great throwback to the mid-aughts club days on the West End!",
+          "A leftover from the heyday of UKG"
+      ]
     },
     {
       "id": 7,
@@ -149,8 +197,7 @@
       "length": "3:24",
       "year_released": "2021",
       "songUrl": "https://open.spotify.com/track/09gysnJpfQ3ublBmJDfcEC?si=17f3fdc967ab46a6&nd=1",
-      "image": "https://i1.sndcdn.com/artworks-1dhBfF6HCrSiV6zq-UKPYvg-t500x500.jpg",
-      "upvotes": 17,
+      "upvotes": 1,
       "downvotes": 100,
       "comments": [
         "Who doesn't luv money?",

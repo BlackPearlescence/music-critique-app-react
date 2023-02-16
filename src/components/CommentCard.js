@@ -62,3 +62,4 @@ function CommentCard({songId, songs, setSongs, comments = [], setComments, comme
 }
 
 export default CommentCard;
+export default CommentCard;
