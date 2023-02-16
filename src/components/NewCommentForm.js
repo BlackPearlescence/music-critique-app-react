@@ -38,13 +38,13 @@ function NewCommentForm({comments = [], setComments,songs,setSongs,songId}) {
                 commentText: commentField,
                 likes: 0,
             }
-    
+
             const updatedComments = [...comments, newComment]
             // const updatedSongs = [...songs]
             // updatedSongs.comments = updatedComments
             // setSongs(updatedSongs)
-    
-    
+
+
             fetch(`http://localhost:4000/songs/${songId}`,{
                 method: "PATCH",
                 headers: {
@@ -52,12 +52,12 @@ function NewCommentForm({comments = [], setComments,songs,setSongs,songId}) {
                 },
                 body: JSON.stringify({comments: updatedComments})
             })
-    
+
             setComments([...comments, newComment])
-            
+
             setValidated(true)
         }
-        
+
     }
 
 
@@ -65,26 +65,26 @@ function NewCommentForm({comments = [], setComments,songs,setSongs,songId}) {
     const handleCommentChange = (e) => {
         setCommentField(e.target.value)
     }
-    
-    
+
+
     return (
-        <div>   
-            <h3>Add A Comment!</h3>
+        <div>
+            <h3 className='add-comment'>Add A Comment!</h3>
                 <Form noValidate validated={validated}  onSubmit={handleCommentSubmit}>
                     <Form.Group widths='equal'>
                             <Form.Control
                                 style={{height: "100px"}}
                                 as="textarea"
                                 id="comment"
-                                fluid label="Comment" 
-                                placeholder="Add a Comment" 
+                                fluid label="Comment"
+                                placeholder="Add a Comment"
                                 name="Comment"
                                 value={commentField}
                                 onChange={handleCommentChange}
                                 required/>
                             <Form.Control.Feedback type="invalid">No blank comments!</Form.Control.Feedback>
                     </Form.Group>
-                    <Button variant="primary" type="submit">Submit Comment!</Button> 
+                    <button variant="primary" type="submit">Submit Comment!</button>
                 </Form>
         </div>
     )

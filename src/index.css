@@ -355,6 +355,11 @@ header h1 a:hover {
   margin: 0 auto;
 }
 
+.add-comment{
+  text-align: center;
+  padding: 1rem;
+}
+
 /* Bootstrap styles */
 
 .carousel{

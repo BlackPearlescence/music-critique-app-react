@@ -43,30 +43,6 @@
   ],
   "songs": [
     {
-      "id": 1,
-      "title": "Rags2Riches 2 (feat. Lil Baby)",
-      "artist": "Rod Wave",
-      "album": "Pray 4 Love",
-      "genre": [
-        "Hip-Hop",
-        "Rap"
-      ],
-      "description": "Melodic slow-beat song with catchy, meaningful lyrics",
-      "length": "3:55",
-      "year_released": "2020",
-      "image": "https://i1.sndcdn.com/artworks-F58uMh49zJBqTyd7-4iiwnw-t500x500.jpg",
-      "upvotes": 30,
-      "downvotes": 13,
-      "comments": [
-        {
-          "commentText": "This is a stupid song",
-          "icon": "https://i1.sndcdn.com/artworks-F58uMh49zJBqTyd7-4iiwnw-t500x500.jpg",
-          "username": "Duckling",
-          "likes": 0
-        }
-      ]
-    },
-    {
       "id": 2,
       "title": "Outta My System (feat. T-Pain & Johnta Austin)",
       "artist": "Bow Wow",
