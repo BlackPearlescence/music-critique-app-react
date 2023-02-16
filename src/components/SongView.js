@@ -21,10 +21,17 @@ function SongView({bestSong, setBestSong}) {
     }
 
     useEffect(()=>{
-        fetch(`http://localhost:4000/songs/${id}`)
-            .then((res) => (res.json()))
-            .then((songInfoData) => setSongInfo(songInfoData))
-    }, [id])
+        const handleGetSongInfo = async () => {
+            const data = await fetch(`http://localhost:4000/songs/${id}`);
+            const json = await data.json()
+            setSongInfo(json)
+
+        }
+        handleGetSongInfo()
+        // fetch(`http://localhost:4000/songs/${id}`)
+        //     .then((res) => (res.json()))
+        //     .then((songInfoData) => setSongInfo(songInfoData))
+    }, [])
 
     const handleUpvotes = (e) => {
         patchVotes({upvotes: songInfo.upvotes + 1})

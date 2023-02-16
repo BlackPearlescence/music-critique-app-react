@@ -7,12 +7,21 @@ import ToastContainer from "react-bootstrap/ToastContainer";
 function SongCard({songs, setSongs, song}){
 
     const handleDeleteSong = (e) => {
-        fetch(`http://localhost:4000/songs/${song.id}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type" : "application/json",
-            },
-        })
+        const handleDelete = async () => {
+            await fetch(`http://localhost:4000/songs/${song.id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type" : "application/json",
+                },
+            })
+        }
+        handleDelete()
+        // fetch(`http://localhost:4000/songs/${song.id}`, {
+        //     method: "DELETE",
+        //     headers: {
+        //         "Content-Type" : "application/json",
+        //     },
+        // })
         setSongs(songs.filter(songItem => songItem !== song ))
     }
     return(

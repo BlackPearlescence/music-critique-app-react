@@ -3,14 +3,14 @@ import CommentCard from './CommentCard'
 import NewCommentForm from './NewCommentForm'
 import {v4} from "uuid";
 
-function CommentList({songId, songs, setSongs, commentData = []}) {
+function CommentList({songId, songs, setSongs, songInfo, commentData = []}) {
 
-    const [comments, setComments] = useState(commentData);
+    const [comments, setComments] = useState(commentData = []);
     return (
         <div className="commentList" >
             {comments.map(comment => 
             <CommentCard 
-            key={comment.id}
+            key={v4()}
             comment={comment}
             comments={comments}
             setComments={setComments}

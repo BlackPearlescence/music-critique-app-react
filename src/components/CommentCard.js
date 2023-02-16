@@ -5,7 +5,7 @@ import Image from "react-bootstrap/Image"
 import Button from "react-bootstrap/Button"
 import { createPath } from 'react-router-dom';
 
-function CommentCard({songId, songs, setSongs, comments = [], setComments, comment = {}}) {
+function CommentCard({songId, songs, setSongs, comments = [], setComments, comment}) {
     const [likes, setLikes] = useState(comment.likes)
     console.log(comment.icon)
     const _ = require("lodash");

@@ -10,7 +10,7 @@ function NewCommentForm({comments = [], setComments,songs,setSongs,songId}) {
 
     // function handleClick(event) {
 
-        // setCommentField(prev => [...prev, commentField])
+        // setCommentField(prev => [...prev, commentForm])
     
 
     //     // add logic for comment

@@ -87,15 +87,7 @@
       "image": "http://images.genius.com/aaeccb678c5c9313bc6b49f17af6c3b4.1000x1000x1.jpg",
       "upvotes": 50,
       "downvotes": 16,
-      "comments": [
-        {
-          "id": "3323aafa-f098-46d1-8438-86f622fcd1e4",
-          "username": "Me!",
-          "icon": "https://s.abcnews.com/images/US/fox-01-as-gty-181019_hpMain_4x3t_992.jpg",
-          "commentText": "Fuck this song",
-          "likes": 31
-        }
-      ]
+      "comments": []
     },
     {
       "id": 3,
@@ -110,7 +102,7 @@
       "length": "4:05",
       "year_released": "2013",
       "image": "https://i.scdn.co/image/ab67616d0000b273123fa142338bf0c670ce5ec5",
-      "upvotes": 42,
+      "upvotes": 47,
       "downvotes": 12,
       "comments": [
         {
@@ -185,36 +177,6 @@
           "icon": "https://static.wikia.nocookie.net/pokemon/images/a/ae/Gary_Blastoise.png/revision/latest?cb=20210528230616",
           "username": "PokemonSearcher",
           "likes": 7
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "title": "Wot Do U Call It?",
-      "artist": "Wiley",
-      "album": "Treddin' On Thin Ice",
-      "genre": [
-        "Grime",
-        "Eskibeat"
-      ],
-      "description": "Lively post-90's club era jam from an OG British grime artist",
-      "length": "3:19",
-      "year_released": "2004",
-      "image": "https://i1.sndcdn.com/artworks-f36abab2-4664-4d6f-98dd-d6baa4ee0370-0-t500x500.jpg",
-      "upvotes": 129,
-      "downvotes": 11,
-      "comments": [
-        {
-          "commentText": "Great throwback to the mid-aughts club days on the West End!",
-          "icon": "https://i.natgeofe.com/k/63b1a8a7-0081-493e-8b53-81d01261ab5d/red-panda-full-body_4x3.jpg",
-          "username": "RedFox",
-          "likes": 28
-        },
-        {
-          "commentText": "A leftover from the heyday of UKG",
-          "icon": "https://aldf.org/wp-content/uploads/2018/05/lamb-iStock-665494268-16x9-e1559777676675-1200x675.jpg",
-          "username": "PaulMcCartneyStan",
-          "likes": 90
         }
       ]
     },

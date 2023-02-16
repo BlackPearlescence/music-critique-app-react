@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useEffect, useState } from "react";
-import {v4 as uuidv4} from "uuid"
+import {v4 as uuidv4, v4} from "uuid"
 import { Badge, Col, ToggleButton, ToggleButtonGroup, FloatingLabel, Alert} from "react-bootstrap";
 function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
     console.log(genres)
@@ -25,6 +25,7 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
     // console.log(genres)
     const handleFormClose = (e) => {setShowForm(false)}
     const handleGenreChange = (genres) => {
+        console.log(genres)
         setNewSongFormData({...newSongFormData, genre: genres})
         console.log(genresChosen)
     }
@@ -37,9 +38,10 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
             e.stopPropagation();
             e.preventDefault();
         }
-        // else{
+        else{
             setValidated(true); 
             const newSong = {
+                id: uuidv4(),
                 title: newSongFormData.title,
                 artist: newSongFormData.artist,
                 album: newSongFormData.album,
@@ -59,12 +61,13 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
                 headers: {
                     "Content-Type" : "application/json"
                 },
-                body: JSON.stringify(newSongFormData)
+                body: JSON.stringify(newSong)
             })
             console.log(newSong)
-            newSong.id = uuidv4()
+            // newSong.id = uuidv4()
+            
             setSongs([...songs, newSong])
-        // }
+        }
        
             
        
@@ -88,7 +91,7 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
             </Modal.Header>
             <Form noValidate onSubmit={handleNewSongSubmit} validated={validated}>
                 <Modal.Body>
-                    <Form.Group controlId="1">
+                    <Form.Group>
                         <Form.Label>Song Title</Form.Label>
                         <Form.Control name="title" type="text" placeholder="Song Title"
                         onChange={handleFormChange} required/>
@@ -96,7 +99,7 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
                             Please enter a song title
                         </Form.Control.Feedback>
                     </Form.Group>
-                    <Form.Group controlId="2">
+                    <Form.Group>
                         <Form.Label>Artist Name</Form.Label>
                         <Form.Control name="artist" type="text" placeholder="Artist Name"
                         onChange={handleFormChange} required/>
@@ -104,7 +107,7 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
                             Please enter an artist name
                         </Form.Control.Feedback>
                     </Form.Group>
-                    <Form.Group controlId="3">
+                    <Form.Group>
                         <Form.Label>Album</Form.Label>
                         <Form.Control name="album" type="text" placeholder="Album Name"
                         onChange={handleFormChange}/>
