@@ -15,7 +15,10 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
         album: "",
         genre: [],
         description: "",
-        songUrl: "",
+        year: "",
+        minutes: 0,
+        seconds: 0,
+        // songUrl: "",
         image: "",
     });
     const date = new Date()
@@ -42,7 +45,9 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
                 album: newSongFormData.album,
                 genre: newSongFormData.genre,
                 description: newSongFormData.description,
-                songUrl: newSongFormData.songUrl,
+                year_released: newSongFormData.year.toString(),
+                length: newSongFormData.minutes.toString() + ":" + newSongFormData.seconds.toString(),
+                // songUrl: newSongFormData.songUrl,
                 image: newSongFormData.image,
                 comments: [],
                 upvotes: 0,
@@ -136,7 +141,8 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
 
                     <Form.Group>
                         <Form.Label>Year Released</Form.Label>
-                        <Form.Control name="year" type="number" min={1800} max={date.getFullYear()} required/>
+                        <Form.Control name="year" type="number" min={1800} max={date.getFullYear()} 
+                        onChange={handleFormChange} required/>
                         <Form.Control.Feedback type="invalid">
                             Please enter a valid year
                         </Form.Control.Feedback>
@@ -144,24 +150,27 @@ function NewSongForm({showForm, setShowForm, genres = [], songs, setSongs}){
                     <Form.Label>Length</Form.Label>
                     </Form.Group>
                         <FloatingLabel label="minutes">
-                            <Form.Control name="minutes" type="number" min={0} max={59} defaultValue={0}/>
+                            <Form.Control name="minutes" type="number" min={0} max={59} defaultValue={0}
+                            onChange={handleFormChange}/>
                             <Form.Control.Feedback type="valid"></Form.Control.Feedback>
                         </FloatingLabel>
                         <FloatingLabel label="seconds">
-                            <Form.Control name="seconds" type="number" min={0} max={59} defaultValue={0}/>
+                            <Form.Control name="seconds" type="number" min={0} max={59} defaultValue={0}
+                            onChange={handleFormChange}/>
                             <Form.Control.Feedback type="valid"></Form.Control.Feedback>
                         </FloatingLabel>
-                    <Form.Group>
+                    {/* <Form.Group>
                         <Form.Label>Spotify Link</Form.Label>
                         <Form.Control name="songUrl" type="text" placeholder="Spotify Link"
                         onChange={handleFormChange}/>
                         <Form.Control.Feedback type="invalid">Please enter a spotify link</Form.Control.Feedback>
-                    </Form.Group>
+                    </Form.Group> */}
                     <Form.Group>
                         <Form.Label>Song Image</Form.Label>
                         <Form.Control name="image" type="url" placeholder="Image Link" 
                         onChange={handleFormChange}/>
-                        <Form.Control.Feedback type="invalid">Please enter an image link</Form.Control.Feedback>
+                        <Form.Control.Feedback type="invalid">Please enter an image link
+                        </Form.Control.Feedback>
                     </Form.Group>
                     
                    

@@ -1,32 +1,72 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
+import {v4} from "uuid"
 
-function NewCommentForm() {
+function NewCommentForm({comments = [], setComments,songs,setSongs,songId}) {
 
-    function handleClick(event) {
-        const newComment = document.querySelector('#comment').value
+    const [validated, setValidated] = useState(false)
+    const [commentField, setCommentField] = useState("")
 
-        fetch(``, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newComment)
-        })
-        .then(response => response.json())
+    // function handleClick(event) {
 
-        // add logic for comment
-    }
+    //     fetch(``, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(newComment)
+    //     })
+    //     .then(response => response.json())
+
+    //     // add logic for comment
+    // }
 
     const handleCommentSubmit = (e) => {
+        e.preventDefault()
+        const form = e.currentTarget
+        setValidated(false)
+        if(form.checkValidity() === true){
+            e.stopPropagation()
+        }
+        const newComment = {
+            id: v4(),
+            username: "Me!",
+            icon: "https://s.abcnews.com/images/US/fox-01-as-gty-181019_hpMain_4x3t_992.jpg",
+            commentText: commentField,
+            likes: 0,
+        }
 
+        const updatedComments = [...comments, newComment]
+        // const updatedSongs = [...songs]
+        // updatedSongs.comments = updatedComments
+        // setSongs(updatedSongs)
+
+
+        fetch(`http://localhost:4000/songs/${songId}`,{
+            method: "PATCH",
+            headers: {
+                "Content-Type" : "application/json",
+            },
+            body: JSON.stringify({comments: updatedComments})
+        })
+
+        setComments([...comments, newComment])
+        
+        setValidated(true)
     }
 
+
+
+    const handleCommentChange = (e) => {
+        setCommentField(e.target.value)
+    }
+    
+    
     return (
-        <div>
+        <div>   
             <h3>Add A Comment!</h3>
-                <Form onSubmit={handleCommentSubmit}>
+                <Form noValidate validated={validated} onSubmit={handleCommentSubmit}>
                     <Form.Group widths='equal'>
                             <Form.Control
                                 style={{height: "100px"}}
@@ -34,7 +74,11 @@ function NewCommentForm() {
                                 id="comment"
                                 fluid label="Comment" 
                                 placeholder="Add a Comment" 
-                                name="Comment"/>
+                                name="Comment"
+                                value={commentField}
+                                onChange={handleCommentChange}
+                                required/>
+                            <Form.Control.Feedback type="invalid">No blank comments!</Form.Control.Feedback>
                     </Form.Group>
                     <Button variant="primary" type="submit">Submit Comment!</Button> 
                 </Form>

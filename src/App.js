@@ -42,7 +42,7 @@ import { useNavigate } from "react-router-dom";
 
           <Route path="/songoftheday" element={<SongOfTheDay/>} />
 
-          <Route path="/songs/:id/view" element={<SongView />}/>
+          <Route path="/songs/:id/view" element={<SongView songs={songs} setSongs={setSongs} />}/>
         </Routes>
         {/* <NewCommentForm 
         comments={comments}

@@ -63,7 +63,7 @@ function AllSongsGallery({songs = [], setSongs, genres}){
                 setSortQuery(songs.sort((a,b) => a.artist.localeCompare(b.artist)))
                 break;
             case "year":
-                setSortQuery(songs.sort((a,b) => parseInt(a.year) - parseInt(b.year)))
+                setSortQuery(songs.sort((a,b) => parseInt(a.year_released) - parseInt(b.year_released)))
                 break;
             case "length":
                 setSortQuery(songs.sort((a,b) => {

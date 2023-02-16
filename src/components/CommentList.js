@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CommentCard from './CommentCard'
 import NewCommentForm from './NewCommentForm'
 import {v4} from "uuid";
 
-function CommentList({songId, comments = []}) {
+function CommentList({songId, songs, setSongs, commentData = []}) {
 
+    const [comments, setComments] = useState(commentData);
     return (
         <div className="commentList">
             {comments.map(comment => 
             <CommentCard 
-            key={v4()}
+            key={comment.id}
             comment={comment}
             comments={comments}
+            setComments={setComments}
+            songs={songs}
+            setSongs={setSongs}
             songId={songId}/>)}
-            <NewCommentForm />
+            <NewCommentForm
+            songs={songs}
+            setSongs={setSongs}
+            comments={comments}
+            setComments={setComments}
+            songId={songId}/>
         </div>
     )
 }
