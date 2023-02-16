@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { Carousel } from "react-bootstrap";
+import Button from 'react-bootstrap/Button';
+import { Link, useNavigate } from "react-router-dom";
+import Gallery from "./Gallery";
 
-import Gallery from './Gallery';
-
-function Home({ isDarkMode }) {
-  const [allSongs, setAllSong] = useState([]);
+function Home({isDarkMode}) {
+  const [allSongs, setAllSong] = useState([])
+  const navigate = useNavigate()
 
   const mostPopularSong = useEffect(() => {
     // fetch the 3 most recently added projects from json-server
@@ -15,6 +18,8 @@ function Home({ isDarkMode }) {
 
   return (
     <section className={isDarkMode ? 'App' : 'App.light'}>
+      
+    <Gallery allSongs={allSongs}/>
       <h2 style={{ fontSize: '3rem' }}>Welcome to Sound Savant</h2>
       <p className="body-text">
         Welcome to the Music App Project! This project is designed to allow
@@ -26,8 +31,36 @@ function Home({ isDarkMode }) {
         everything you need to enhance your music experience. So let's dive in
         and discover the magic of music together!
       </p>
+      <h3>Top Rated Songs</h3>
+      {/* <section className="box">
+        {allSongs.map((song) => (
+          <img src={song.image} key={song.id} alt={song.title} />
+        ))}
+      </section> */}
 
-      <Gallery allSongs={allSongs} />
+      <Carousel fade className="carousel">
+        {allSongs.map(song => 
+          <Carousel.Item onClick={(e) => {navigate(`/songs/${song.id}/view`)}}>
+            <img
+          className="d-block w-100"
+          src={song.image}
+          alt={song.title}
+            />
+            <Carousel.Caption>
+              <h3>{song.title}</h3>
+              <p>{song.description}</p>
+            </Carousel.Caption>
+          </Carousel.Item>)}
+      </Carousel>
+
+      <div style={{ margin: '1rem 0' }}>
+        <Link to="/songs">
+          <Button variant="primary" size="lg">
+            View All Songs
+          </Button>
+        </Link>
+        
+      </div>
     </section>
   );
 }

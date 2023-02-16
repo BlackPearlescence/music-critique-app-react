@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 function Gallery({ allSongs }) {
 
   return (
-    <Carousel variant="dark">
+    <Carousel className="card" variant="dark">
         {allSongs.map((song) => {
         return (
           <Carousel.Item key ={song.id}>

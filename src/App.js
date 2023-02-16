@@ -3,11 +3,11 @@
 
 import {Route, Routes} from "react-router-dom";
 import React,{ useEffect, useState } from "react";
-import Home from "./components/components/Home.js";
-import AllSongsGallery from "./components/components/AllSongsGallery.js";
-import SongOfTheDay from "./components/components/SongOfTheDay.js";
-import SongView from "./components/components/SongView.js";
-import Header from "./components/components/Header.js";
+import Home from "./components/Home.js";
+import AllSongsGallery from "./components/AllSongsGallery.js";
+import SongOfTheDay from "./components/SongOfTheDay.js";
+import SongView from "./components/SongView.js";
+import Header from "./components/Header.js";
 import { useNavigate } from "react-router-dom";
 
  function App() {
@@ -51,7 +51,7 @@ import { useNavigate } from "react-router-dom";
       <Routes>
         <Route exact path="/" element={<Home isDarkMode={isDarkMode} />} />
 
-          <Route path="/songs" element={<AllSongsGallery songs={songs} setSongs={setSongs} genres={genres}/>}/>
+          <Route path="/songs" element={<AllSongsGallery songs={songs} setSongs={setSongs} genres={genres} isDarkMode={isDarkMode}/>}/>
 
           <Route path="/songoftheday" element={<SongOfTheDay bestSong={bestSong} setBestSong={setBestSong} />} />
 

@@ -11,7 +11,7 @@ import ToggleButton  from "react-bootstrap/ToggleButton";
 import Alert from "react-bootstrap/Alert"
 
 
-function AllSongsGallery({songs = [], setSongs, genres}){
+function AllSongsGallery({songs = [], setSongs, genres,isDarkMode}){
     const [searchQuery, setSearchQuery] = useState("")
     const [filterQuery, setFilterQuery] = useState ("All")
     const [sortQuery, setSortQuery] = useState("Song Title")
