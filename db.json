@@ -1,200 +1,245 @@
-
 {"songs": [
-    {
-      "id": 1,
-      "title": "Rags2Riches 2 (feat. Lil Baby)",
-      "artist": "Rod Wave",
-      "album": "Pray 4 Love",
-      "genre": [
-        "Hip-Hop",
-        "Rap"
-      ],
-      "description": "Melodic slow-beat song with catchy, meaningful lyrics",
-      "length": "3:55",
-      "year_released": "2020",
-      "songUrl": "https://open.spotify.com/track/40TPiJpvwGIyvPjJMDTKfy?si=73ce472775324d18&nd=1",
-      "image": "https://i1.sndcdn.com/artworks-F58uMh49zJBqTyd7-4iiwnw-t500x500.jpg",
-      "upvotes": 0,
-      "downvotes": 10,
-      "comments": [
-        {
-          "commentText": "Great to vibe with on a rainy day",
-          "likes": 80
-        },
-        {
-          "commentText": "Throw this on when you need some inspiration",
+  {
+    "id": 1,
+    "title": "Rags2Riches 2 (feat. Lil Baby)",
+    "artist": "Rod Wave",
+    "album": "Pray 4 Love",
+    "genre": [
+      "Hip-Hop",
+      "Rap"
+    ],
+    "description": "Melodic slow-beat song with catchy, meaningful lyrics",
+    "length": "3:55",
+    "year_released": "2020",
+    "image": "https://i1.sndcdn.com/artworks-F58uMh49zJBqTyd7-4iiwnw-t500x500.jpg",
+    "upvotes": 0,
+    "downvotes": 10,
+    "comments": [
+      {
+        "commentText": "Great to vibe with on a rainy day",
+        "icon": "https://static.wikia.nocookie.net/youtube/images/d/d2/Ice_Bucket_Challenge_Playboy_Billionaire_Astronaut_Edition/revision/latest/scale-to-width-down/340?cb=20200401100700",
+        "username": "LazyMasquerade",
+        "likes": 80
+      },
+      {
+        "commentText": "Throw this on when you need some inspiration",
+        "icon": "https://pyxis.nymag.com/v1/imgs/676/55f/1c62bee45048ca148bf5d4cb29b2ab7522.jpg",
+        "username": "MrBeast5000",
+        "likes": 10
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Outta My System (feat. T-Pain & Johnta Austin)",
+    "artist": "Bow Wow",
+    "album": "The Price of Fame",
+    "genre": [
+      "Hip-Hop",
+      "Rap"
+    ],
+    "description": "Sad analysis of the feelings someone goes through post-breakup",
+    "length": "3:58",
+    "year_released": "2006",
+    "image": "http://images.genius.com/aaeccb678c5c9313bc6b49f17af6c3b4.1000x1000x1.jpg",
+    "upvotes": 0,
+    "downvotes": 10,
+    "comments": [
+      {
+          "commentText" : "An oldie that still holds up well!",
+          "icon": "https://images.unsplash.com/photo-1564594736624-def7a10ab047?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
+          "username": "AngryVideoGameNerd",
+          "likes": 30
+      },
+      {
+        "commentText": "Bow Wow and T-Pain were a formidable force back in '06",
+        "icon": "https://upload.wikimedia.org/wikipedia/en/6/6e/Link_to_the_Past_Zelda.png",
+        "username": "MrNightmare",
+        "likes": 23
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Dis Ain't What You Want",
+    "artist": "Lil Durk",
+    "album": "The Tape",
+    "genre": [
+      "Hip-Hop",
+      "Rap"
+    ],
+    "description": "Energetic anthem aimed at all those trying to take away what Lil Durk has earned",
+    "length": "4:05",
+    "year_released": "2013",
+    "image": "https://i.scdn.co/image/ab67616d0000b273123fa142338bf0c670ce5ec5",
+    "upvotes": 40,
+    "downvotes": 10,
+    "comments": [
+      {
+          "commentText" : "Throw this on at the gym",
+          "icon": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/streams/2012/February/120220/62076-6067122.jpg",
+          "username": "LuigiFan50",
           "likes": 10
-        }
-      ]
+      },
+      {
+          "commentText" : "Pumps me up every time. I could run through a brick wall right now!",
+          "icon": "https://m.media-amazon.com/images/I/61mdVn0V2vL.jpg",
+          "username": "GuitarHero",
+          "likes": 5
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Escapism.",
+    "artist": "Raye",
+    "album": "My 21st Century Blues",
+    "genre": [
+      "Hip-Hop",
+      "Electropop",
+      "R&B"
+    ],
+    "description": "A song about wild, uninhibited, reckless post-relationship convalescence",
+    "length": "4:32",
+    "year_released": "2022",
+    "image": "https://upload.wikimedia.org/wikipedia/en/3/3a/Raye_-_Escapism.png",
+    "upvotes": 2,
+    "downvotes": 10,
+    "comments": [
+      {
+        "commentText": "Dealing with break-ups is tough. This sone helped me recover quickly",
+        "icon": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2F0ZXJmYWxsfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "username": "JohnMuir2",
+        "likes": 50
+      },
+      {
+        "commentText": "While not always the most sound advice, a great track nevertheless",
+        "icon": "https://spaceplace.nasa.gov/templates/featured/sun/all-about-the-sun300.jpg",
+        "username": "Neo",
+        "likes": 20
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Real",
+    "artist": "Tim Lyre",
+    "album": "Worry Less",
+    "genre": [
+      "Pop",
+      "Nigerian Alté"
+    ],
+    "description": "Slow-jam Astro-fusion at its best",
+    "length": "4:07",
+    "year_released": "2021",
+    "image": "https://f4.bcbits.com/img/a3707974449_10.jpg",
+    "upvotes": 50,
+    "downvotes": 10,
+    "comments": [
+      {
+        "commentText": "An emerging legend on the international music scene",
+        "icon": "https://www.nhm.ac.uk/content/dam/nhmwww/discover/parasitic-plants/Giant%20padma%20rafflesia%20full-width.jpg.thumb.1160.1160.jpg",
+        "username": "Plantsy",
+        "likes": 32
+      },
+      {
+        "commentText": "Music for a long walk on an overcast afternoon",
+        "icon": "https://static.wikia.nocookie.net/pokemon/images/a/ae/Gary_Blastoise.png/revision/latest?cb=20210528230616",
+        "username": "PokemonSearcher",
+        "likes": 7
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Wot Do U Call It?",
+    "artist": "Wiley",
+    "album": "Treddin' On Thin Ice",
+    "genre": [
+      "Grime",
+      "Eskibeat"
+    ],
+    "description": "Lively post-90's club era jam from an OG British grime artist",
+    "length": "3:19",
+    "year_released": "2004",
+    "image": "https://i1.sndcdn.com/artworks-f36abab2-4664-4d6f-98dd-d6baa4ee0370-0-t500x500.jpg",
+    "upvotes": 129,
+    "downvotes": 11,
+    "comments": [
+    {
+      "commentText": "Great throwback to the mid-aughts club days on the West End!",
+      "icon": "https://i.natgeofe.com/k/63b1a8a7-0081-493e-8b53-81d01261ab5d/red-panda-full-body_4x3.jpg",
+      "username": "RedFox",
+      "likes": 28
     },
     {
-      "id": 2,
-      "title": "Outta My System (feat. T-Pain & Johnta Austin)",
-      "artist": "Bow Wow",
-      "album": "The Price of Fame",
-      "genre": [
-        "Hip-Hop",
-        "Rap"
-      ],
-      "description": "Sad analysis of the feelings someone goes through post-breakup",
-      "length": "3:58",
-      "year_released": "2006",
-      "songUrl": "https://open.spotify.com/track/3LGeYNY9aWQuBJovOOowqm?si=b45b86a233f44e5c&nd=1",
-      "image": "http://images.genius.com/aaeccb678c5c9313bc6b49f17af6c3b4.1000x1000x1.jpg",
-      "upvotes": 0,
-      "downvotes": 10,
-      "comments": [
-        {
-            "commentText" : "An oldie that still holds up well!",
-            "likes": 30
-        },
-        {
-          "commentText": "Bow Wow and T-Pain were a formidable force back in '06",
-          "likes": 23
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Dis Ain't What You Want",
-      "artist": "Lil Durk",
-      "album": "The Tape",
-      "genre": [
-        "Hip-Hop",
-        "Rap"
-      ],
-      "description": "Energetic anthem aimed at all those trying to take away what Lil Durk has earned",
-      "length": "4:05",
-      "year_released": "2013",
-      "songUrl": "https://open.spotify.com/track/6qzKyme6MzOV3WJ0Qi0MMx?si=d60c3ac328e74240&nd=1",
-      "image": "https://i.scdn.co/image/ab67616d0000b273123fa142338bf0c670ce5ec5",
-      "upvotes": 40,
-      "downvotes": 10,
-      "comments": [
-        {
-            "commentText" : "Throw this on at the gym",
-            "likes": 10
-        },
-        {
-            "commentText" : "Pumps me up every time. I could run through a brick wall right now!",
-            "likes": 5
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Escapism.",
-      "artist": "Raye",
-      "album": "My 21st Century Blues",
-      "genre": [
-        "Hip-Hop",
-        "Electropop",
-        "R&B"
-      ],
-      "description": "A song about wild, uninhibited, reckless post-relationship convalescence",
-      "length": "4:32",
-      "year_released": "2022",
-      "songUrl": "https://open.spotify.com/track/5Z2MiIZ5I3jJvvmeWMLbOQ?si=d43b098295a848c4&nd=1",
-      "image": "https://upload.wikimedia.org/wikipedia/en/3/3a/Raye_-_Escapism.png",
-      "upvotes": 2,
-      "downvotes": 10,
-      "comments": [
-        {
-          "commentText": "Dealing with break-ups is tough. This sone helped me recover quickly",
-          "likes": 50
-        },
-        {
-          "commentText": "While not always the most sound advice, a great track nevertheless",
-          "likes": 20
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Real",
-      "artist": "Tim Lyre",
-      "album": "Worry Less",
-      "genre": [
-        "Pop",
-        "Nigerian Alté"
-      ],
-      "description": "Slow-jam Astro-fusion at its best",
-      "length": "4:07",
-      "year_released": "2021",
-      "songUrl": "https://open.spotify.com/track/0cgIQxMjFoxP2lpV21f4RO?si=854037bbdcb249a4&nd=1",
-      "image": "https://f4.bcbits.com/img/a3707974449_10.jpg",
-      "upvotes": 50,
-      "downvotes": 10,
-      "comments": [
-        {
-          "commentText": "An emerging legend on the international music scene"
-        },
-        "Music for a long walk on an overcast afternoon"
-      ]
-    },
-    {
-      "id": 6,
-      "title": "Wot Do U Call It?",
-      "artist": "Wiley",
-      "album": "Treddin' On Thin Ice",
-      "genre": [
-        "Grime",
-        "Eskibeat"
-      ],
-      "description": "Lively post-90's club era jam from an OG British grime artist",
-      "length": "3:19",
-      "year_released": "2004",
-      "songUrl": "https://open.spotify.com/track/1rkC5w0JvpEnXExoWwfbDo?si=ec5dd9cb28914bbd&nd=1",
-      "image": "https://i1.sndcdn.com/artworks-f36abab2-4664-4d6f-98dd-d6baa4ee0370-0-t500x500.jpg",
-      "upvotes": 129,
-      "downvotes": 11,
-      "comments": [
-        "Great throwback to the mid-aughts club days on the West End!",
-        "A leftover from the heyday of UKG"
-      ]
-    },
-    {
-      "id": 7,
-      "title": "London City",
-      "artist": "Devlin",
-      "album": "Bud, Sweat, and Beers",
-      "genre": [
-        "R&B",
-        "Soul",
-        "Rap"
-      ],
-      "description": "Time capsule of London's nightlife scene circa 2010, longer ago now than anyone cares to admit...",
-      "length": "3:03",
-      "year_released": "2010",
-      "songUrl": "https://open.spotify.com/track/4DIBmvk0dnu9M3TAQxNtMx?si=99233480e9b64a97&nd=1",
-      "image": "https://i.scdn.co/image/ab67616d0000b27362ba491790cef450cacec231",
-      "upvotes": 41348,
-      "downvotes": 10,
-      "comments": [
-        "Reminds me of my uni days",
-        "Great homage to a great city"
-      ]
-    },
-    {
-      "id": 8,
-      "title": "SAD GIRLS LUV MONEY Remix (feat. Kali Uchis nd Moliy)",
-      "artist": "Amaarae",
-      "album": "The Angel You Don't Know",
-      "genre": [
-        "R&B",
-        "Afropop"
-      ],
-      "description": "Infectious dance track that never fails to lighten the mood",
-      "length": "3:24",
-      "year_released": "2021",
-      "songUrl": "https://open.spotify.com/track/09gysnJpfQ3ublBmJDfcEC?si=17f3fdc967ab46a6&nd=1",
-      "image": "https://i1.sndcdn.com/artworks-1dhBfF6HCrSiV6zq-UKPYvg-t500x500.jpg",
-      "upvotes": 2,
-      "downvotes": 100,
-      "comments": [
-        "Who doesn't luv money?",
-        "Impossible to fight the urge to dance when this one's on!"
-      ]
+      "commentText": "A leftover from the heyday of UKG",
+      "icon": "https://aldf.org/wp-content/uploads/2018/05/lamb-iStock-665494268-16x9-e1559777676675-1200x675.jpg",
+      "username": "PaulMcCartneyStan",
+      "likes": 90
     }
-  ]
+    ]
+  },
+  {
+    "id": 7,
+    "title": "London City",
+    "artist": "Devlin",
+    "album": "Bud, Sweat, and Beers",
+    "genre": [
+      "R&B",
+      "Soul",
+      "Rap"
+    ],
+    "description": "Time capsule of London's nightlife scene circa 2010, longer ago now than anyone cares to admit...",
+    "length": "3:03",
+    "year_released": "2010",
+    "image": "https://i.scdn.co/image/ab67616d0000b27362ba491790cef450cacec231",
+    "upvotes": 41348,
+    "downvotes": 10,
+    "comments": [
+    {
+      "commentText": "Reminds me of my uni days",
+      "icon": "https://cdn.britannica.com/12/136912-050-58299570/Tower-Bridge-River-Thames-London.jpg",
+      "username": "TedLasso",
+      "likes": 14
+    },
+    {
+      "commentText": "Great homage to a great city",
+      "icon": "https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_90,w_1400/fl_lossy,pg_1/krpjbyvedpf7kwz2scyh/james-gandolfini-tony-soprano",
+      "username": "TonySoprano",
+      "likes": 27
+    }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "SAD GIRLS LUV MONEY Remix (feat. Kali Uchis nd Moliy)",
+    "artist": "Amaarae",
+    "album": "The Angel You Don't Know",
+    "genre": [
+      "R&B",
+      "Afropop"
+    ],
+    "description": "Infectious dance track that never fails to lighten the mood",
+    "length": "3:24",
+    "year_released": "2021",
+    "image": "https://i1.sndcdn.com/artworks-1dhBfF6HCrSiV6zq-UKPYvg-t500x500.jpg",
+    "upvotes": 2,
+    "downvotes": 100,
+    "comments": [
+    {
+      "commentText": "Who doesn't luv money?",
+      "icon": "https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png",
+      "username": "WalterWhite",
+      "likes": 4
+    },
+    {
+      "commentText": "Impossible to fight the urge to dance when this one's on!",
+      "icon": "https://i.natgeofe.com/k/7cd95180-ac57-405d-8ff3-3707305e862f/kansas-sunflowers.jpg",
+      "username": "khbdfjgqwdgr22",
+      "likes": 11
+    }
+    ]
+  }
+]
 }
