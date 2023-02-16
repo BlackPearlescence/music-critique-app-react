@@ -41,7 +41,7 @@ import { useNavigate } from "react-router-dom";
 
           <Route path="/songs" element={<AllSongsGallery songs={songs} setSongs={setSongs} genres={genres}/>}/>
 
-          <Route path="/songoftheday" element={<SongOfTheDay bestSong={bestSong} />} />
+          <Route path="/songoftheday" element={<SongOfTheDay bestSong={bestSong} setBestSong={setBestSong} />} />
 
           <Route path="/songs/:id/view" element={<SongView songs={songs} setSongs={setSongs} bestSong={bestSong} setBestSong={setBestSong} />}/>
         </Routes>
