@@ -19,7 +19,7 @@ function Home({isDarkMode}) {
   return (
     <section className={isDarkMode ? 'App' : 'App.light'}>
 
-    {/* <Gallery allSongs={allSongs}/> */}
+
       <h2 style={{ fontSize: '3rem' }}>Welcome to Sound Savant</h2>
       <p className="body-text">
         Welcome to the Music App Project! This project is designed to allow
@@ -31,31 +31,13 @@ function Home({isDarkMode}) {
         everything you need to enhance your music experience. So let's dive in
         and discover the magic of music together!
       </p>
-      <h3>Top Rated Songs</h3>
-      {/* <section className="box">
-        {allSongs.map((song) => (
-          <img src={song.image} key={song.id} alt={song.title} />
-        ))}
-      </section> */}
+      <h3 style= {{ margin: '2rem 0' }}>Top Rated Songs</h3>
 
-      <Carousel fade className="carousel">
-        {allSongs.map(song =>
-          <Carousel.Item onClick={(e) => {navigate(`/songs/${song.id}/view`)}}>
-            <img
-          className="d-block w-100"
-          src={song.image}
-          alt={song.title}
-            />
-            <Carousel.Caption>
-              <h3>{song.title}</h3>
-              <p>{song.description}</p>
-            </Carousel.Caption>
-          </Carousel.Item>)}
-      </Carousel>
+      <Gallery allSongs={allSongs}/>
 
       <div style={{ margin: '1rem 0' }}>
         <Link to="/songs">
-          <Button variant="primary" size="lg">
+          <Button style= {{ margin: '2rem 0' }} variant="primary" size="lg" >
             View All Songs
           </Button>
         </Link>
