@@ -34,12 +34,11 @@ import { useNavigate } from "react-router-dom";
   },[])
   return (
     <div className="App">
-      <AllSongsGallery songs={songs} setSongs={setSongs} genres={genres}/>
       <Header />
         <Routes>
           <Route exact path="/" element={<Home/>}/>
 
-          <Route path="/songs" element={<AllSongsGallery songs={songs} genres={genres}/>}/>
+          <Route path="/songs" element={<AllSongsGallery songs={songs} setSongs={setSongs} genres={genres}/>}/>
 
           <Route path="/songoftheday" element={<SongOfTheDay/>} />
 
