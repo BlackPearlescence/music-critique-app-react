@@ -63,7 +63,6 @@
           "icon": "https://i1.sndcdn.com/artworks-F58uMh49zJBqTyd7-4iiwnw-t500x500.jpg",
           "username": "Duckling",
           "likes": 0
-
         }
       ]
     },
@@ -81,8 +80,8 @@
       "year_released": "2006",
       "songUrl": "https://open.spotify.com/track/3LGeYNY9aWQuBJovOOowqm?si=b45b86a233f44e5c&nd=1",
       "image": "http://images.genius.com/aaeccb678c5c9313bc6b49f17af6c3b4.1000x1000x1.jpg",
-      "upvotes": 9,
-      "downvotes": 16,
+      "upvotes": 112,
+      "downvotes": 94,
       "comments": []
     },
     {
@@ -99,9 +98,17 @@
       "year_released": "2013",
       "songUrl": "https://open.spotify.com/track/6qzKyme6MzOV3WJ0Qi0MMx?si=d60c3ac328e74240&nd=1",
       "image": "https://i.scdn.co/image/ab67616d0000b273123fa142338bf0c670ce5ec5",
-      "upvotes": 40,
-      "downvotes": 11,
-      "comments": []
+      "upvotes": 67,
+      "downvotes": 17,
+      "comments": [
+        {
+          "id": "51a7eada-bb6a-4c6f-864d-b55c6ac377b0",
+          "username": "Me!",
+          "icon": "https://s.abcnews.com/images/US/fox-01-as-gty-181019_hpMain_4x3t_992.jpg",
+          "commentText": "feafeaf",
+          "likes": 0
+        }
+      ]
     },
     {
       "id": 4,
@@ -122,12 +129,12 @@
       "downvotes": 10,
       "comments": [
         {
-            "commentText": "Dealing with break-ups is tough. This sone helped me recover quickly",
-            "likes": 50
+          "commentText": "Dealing with break-ups is tough. This sone helped me recover quickly",
+          "likes": 50
         },
         {
-            "commentText": "While not always the most sound advice, a great track nevertheless",
-            "likes": 20
+          "commentText": "While not always the most sound advice, a great track nevertheless",
+          "likes": 20
         }
       ]
     },
@@ -136,8 +143,10 @@
       "title": "Real",
       "artist": "Tim Lyre",
       "album": "Worry Less",
-      "genre": [ "Pop",
-      "Nigerian Alté"],
+      "genre": [
+        "Pop",
+        "Nigerian Alté"
+      ],
       "description": "Slow-jam Astro-fusion at its best",
       "length": "4:07",
       "year_released": "2021",
@@ -146,9 +155,9 @@
       "downvotes": 10,
       "comments": [
         {
-            "commentText": "An emerging legend on the international music scene"
+          "commentText": "An emerging legend on the international music scene"
         },
-          "Music for a long walk on an overcast afternoon"
+        "Music for a long walk on an overcast afternoon"
       ]
     },
     {
@@ -157,8 +166,9 @@
       "artist": "Wiley",
       "album": "Treddin' On Thin Ice",
       "genre": [
-          "Grime",
-          "Eskibeat" ],
+        "Grime",
+        "Eskibeat"
+      ],
       "description": "Lively post-90's club era jam from an OG British grime artist",
       "length": "3:19",
       "year_released": "2004",
@@ -167,8 +177,8 @@
       "upvotes": 129,
       "downvotes": 11,
       "comments": [
-          "Great throwback to the mid-aughts club days on the West End!",
-          "A leftover from the heyday of UKG"
+        "Great throwback to the mid-aughts club days on the West End!",
+        "A leftover from the heyday of UKG"
       ]
     },
     {

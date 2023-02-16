@@ -1,20 +1,34 @@
+
 import { useEffect, useState } from "react";
 import { Card, Col, Container, Row, Button } from "react-bootstrap";
 import {useNavigate} from "react-router-dom"
+import APIKEY from "./APIKEY";
 
 function SongOfTheDay({bestSong, setBestSong}){
 
     const navigate = useNavigate();
     const [artistData, setArtistData] = useState([])
-    require(`dotenv`).config()
-    const apiKey = process.env.API_KEY;
-
+    const [isLoaded, setIsLoaded] = useState(false)
     
 
     useEffect(() => {
-        console.log(apiKey)
-        fetch(`https://api.musixmatch.com/ws/v1.1/track.get?apikey=${apiKey}`)
-    }, [])
+        setIsLoaded(false)
+        const handleMusixFetch = async () => {
+            const data = await fetch(`/api/ws/1.1/artist.search?apikey=${APIKEY}&q_artist=${bestSong.artist}&page_size=5`)
+            const json = await data.json()
+            if(json){
+                setIsLoaded(true)
+            }
+            setArtistData(json.message.body.artist_list[0]);
+            console.log(json)
+            console.log(artistData)
+
+        }
+        handleMusixFetch()
+        console.log(artistData)
+        console.log(artistData)
+    }, [bestSong])
+
 
     return(
         <Container>
@@ -24,7 +38,9 @@ function SongOfTheDay({bestSong, setBestSong}){
             <br/>
             <br/>
             <Row>
-                <Col></Col>
+                <Col>
+                    
+                </Col>
                 <Col xs={6}>
                     {bestSong ? 
                     <Card bg="dark">
@@ -57,10 +73,12 @@ function SongOfTheDay({bestSong, setBestSong}){
                     
                 </Col>
                 <Col>
-                {bestSong ? <Card bg="dark">
-                        <Card.Title>Facts about {bestSong.artist}</Card.Title>
+                {isLoaded ? <Card bg="dark">
+                        <Card.Title>Facts about {artistData.artist.artist_name}</Card.Title>
                         <Card.Body>
-                            <Card.Text>He ranks </Card.Text>
+                            <Card.Text>Rating: {artistData.artist.artist_rating} </Card.Text>
+                            <Card.Text>Country: {artistData.artist.artist_country}</Card.Text>
+                            <Card.Text>Born on: {artistData.artist.begin_date}</Card.Text>
                         </Card.Body>
                         <Card.Footer>
                             <Card.Img src={require("./Type_Extended_Black.png")}/>

@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import CommentList from './CommentList';
 import {useParams} from "react-router-dom";
 import { useHistory } from 'react-router-dom';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Container } from 'react-bootstrap';
+import {Chart as ChartJS, ArcElement, Tooltip, Legend} from "chart.js";
+import { Pie } from "react-chartjs-2";
 
 function SongView({bestSong, setBestSong}) {
     const [toggleInfo, setToggleInfo] = useState(false)
     const [songInfo, setSongInfo] = useState({})
     const {id} = useParams();
+    ChartJS.register(ArcElement, Tooltip, Legend);
 
     function handleToggle(event) {
         setToggleInfo(prev => !prev)
@@ -46,7 +49,42 @@ function SongView({bestSong, setBestSong}) {
         console.log(bestSong)
     }
     return (
-        <Card bg="dark">
+        <Container>
+            <Card bg="dark">
+                        <Card.Header>
+                            <Card.Title>Vote Distribution</Card.Title>
+                        </Card.Header>
+                        <Card.Body>
+                            {songInfo ? <Pie  data={{
+        labels: ["Downvotes","Upvotes"],
+        datasets: [
+            {
+                label: "Vote Distribution",
+                data: [songInfo.downvotes,songInfo.upvotes],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                  ],
+                  borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                  ],
+                  borderWidth: 1,
+            }
+        ],
+        data: [10, 20],
+    } }/> : null}
+                    </Card.Body>
+                    </Card>
+                    <Card bg="dark">
             <Card.Title>{songInfo.title}</Card.Title>
             <Card.Img src={songInfo.image}/>
             <Card.Body>
@@ -78,6 +116,9 @@ function SongView({bestSong, setBestSong}) {
                 <CommentList  songId={id} songInfo={songInfo} setSongInfo={setSongInfo} commentData={songInfo.comments}/>
             </Card.Footer>
         </Card>
+        </Container>
+        
+        
     //     <div className="card" >
     //         <div className="content">
     //             <span className="header">
