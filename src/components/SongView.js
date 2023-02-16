@@ -49,7 +49,7 @@ function SongView() {
                     <p>SONG DOWNVOTES</p>
                 </div>
                 <div className="comments">
-                    <CommentList  comments={songInfo.comments}/>
+                    <CommentList  songId={id} comments={songInfo.comments}/>
                 </div>
             </div>
             )}

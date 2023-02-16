@@ -60,14 +60,15 @@
       "downvotes": 10,
       "comments": [
         {
+          "id": 1,
           "username": "ducksauce",
-          "icon": "degfeageag.jpg",
+          "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_cVol6_jTf3_skb1ZQSveE63vQSTd6cvA9A&usqp=CAU",
           "commentText": "Great to vibe with on a rainy day",
-          "likes": 80
+          "likes": 110
         },
         {
-          "username": "ducksauce",
-          "icon": "degfeageag.jpg",
+          "username": "hardworker",
+          "icon": "https://marketplace.canva.com/EAFEits4-uw/1/0/1600w/canva-boy-cartoon-gamer-animated-twitch-profile-photo-oEqs2yqaL8s.jpg",
           "commentText": "Throw this on when you need some inspiration on dogs",
           "likes": 10
         }

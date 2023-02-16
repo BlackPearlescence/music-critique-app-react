@@ -3,14 +3,16 @@ import CommentCard from './CommentCard'
 import NewCommentForm from './NewCommentForm'
 import {v4} from "uuid";
 
-function CommentList({comments = []}) {
+function CommentList({songId, comments = []}) {
 
     return (
         <div className="commentList">
             {comments.map(comment => 
             <CommentCard 
             key={v4()}
-            comment={comment}/>)}
+            comment={comment}
+            comments={comments}
+            songId={songId}/>)}
             <NewCommentForm />
         </div>
     )
